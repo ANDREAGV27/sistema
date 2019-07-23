@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="assent/css/registrarse.css"/>
+    <link rel="stylesheet" href="assent/css/font.css"/>
+    <link rel="stylesheet" href="assent/css/estilos.css"/>   
+    <link rel="stylesheet" href="assent/css/olvido.css"/>   
+    <script src="assent/js/validacion/formulario/olvido.js"></script>
+    <link rel="stylesheet" href="assent/plugins/animate.css/animate.css"/>
+    <link rel="stylesheet" href="assent/plugins/sweetAlert2/sweetalert2.min.css"/>
+
+
+</head>
+<body>
+ 
+     
+<!--    Header  -->
+   <header class="main-header">
+        <section>
+           <div class="logo-contenedor-registrarse">
+               <img src="assent/img/logo-florentina.png" alt="" class="logo-florentina-register"/>    
+            </div>
+            <div class="contenedor-datos-registrarse">
+            <p class="phone-registrarse data">
+                <span class="icon-phone">317 368 8389</span>
+            </p>
+            <p class="addres-registrarse data">
+                <span class="icon-location">Av Primera de Mayo N° 69-38</span>
+            </p>
+            </div>   
+                <h1 class="title-registrarse">
+                    Registrate para mejor contenido
+                </h1>
+            <div class="banner-registrarse">
+                <img src="assent/img/banner.jpg" alt="" class="banner-registrar-img"/>
+            </div>
+        </section>        
+    </header>
+<!--    Header -->
+<!--    Barra Local-->
+    <nav class="main-nav">
+        <div class="container container--flex">  
+            <span class="icon-menu" id="btnmenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
+                <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
+                <li class="menu__item"><a 
+                href="galeria.html" class="menu__link">Galería</a></li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link">Contactenos</a></li>
+            </ul> 
+        </div>
+    </nav>   
+<!--    Contenido   -->
+<!-- <form action="" class="formulario">
+          <h1 class="formulario__titulo">Registrate</h1>
+          
+           <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Nombre</label>
+           
+           <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Apellido</label>
+           
+           <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Teléfono</label>
+           
+           <input type="mail" class="formulario__input">
+           <label for="" class="formulario__label">Correo Electrónico</label>
+           
+           <input type="password" class="formulario__input">
+           <label for="" class="formulario__label">Contraseña nueva</label> 
+           
+           <input href="sesion-iniciada.html" type="submit" class="formulario__submit">
+           
+           <p class="volver-registrar">
+               <a href="index.html">Vover</a> 
+           </p>
+       </form> -->
+<!--    Contenido   -->
+<!--Formulario -->
+    <div class="caja-padre-register">   
+        <div class="caja-formulario">
+            <div class="caja-barra-olvido">   
+                <div class="barra-superior-olvido">
+                    <h1>Olvido su contraseña</h1>
+                </div>  
+            </div>
+            <div class="caja-padre_img">
+                <div class="before_img-register">
+                    <img class="img-olvido" src="assent/img/olvido/fondo-olvido.jpg"/>
+                </div>
+                <div class="caja">
+                </div>  
+            </div>
+        </div>
+        <center>
+            <div class="caja-padre-olvido">
+                <br/>
+                <br/>
+                <div class="logo-email">
+                    <img class="img-mail" src="assent/img/olvido/mail.png"/>
+                </div>
+                <br/>
+                <br/>
+                <h1>¡Recupera tu cuenta!</h1>
+                <br/>
+                <br/>
+                <h3 class="detalles">Por favor, a continuación ingrese su dirección de correo electrónico en el campo de abajo y seleccione Enviar.</h3> 
+                <br/>
+                <h3 class="detalles">A su correo llegará un código de recuperación</h3>
+                <br class="espace" />
+                <br class="espace" />
+                <br />
+                <form action="registrar.php" method="post"  onsubmit="return olvido();">
+                    <input id="correoolvido" type="email"  placeholder="Correo electrónico" class="form-email"/>
+                    <br/>
+                    <input type="submit" class="btn-enviar_olvido" value="Enviar"/>
+                </form>
+            </div>
+        </center>
+        <div class="caja-barra-bottom">
+            <div class="barra-inferior">
+                <h1 class="txt-barra_inferior">.</h1>
+            </div>
+        </div>
+    </div>    
+<!--Formulario -->
+<!--    Botón Volver   -->
+    <div class="caja-btn-volver">
+        <button>
+            <a class="btn-volver" href="iniciar-sesion.html">Volver</a> 
+        </button>
+    </div>
+<!--    Botón Volver   -->
+        <footer class="main-footer">
+            <div class="container container--flex">
+                <div class="column column--33">
+                    <h2 class="column__title">¿Por qué visitarnos?</h2>
+                    <p class="column__txt why">Brindamos el mejor servicio en el montaje y logística de eventos en Bogota, contamos con un gran repertorio de artistas y shows según el gusto musical de cada cliente, atención personalizada y profesionalismo.</p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Contactanos</h2>
+                    <p class="column__txt"><a href="" class="icon-location"></a>Av Primera de Mayo N° 69-38. </p>
+                    <p class="column__txt"><a href="" class="icon-phone"></a>317 368 8389</p>
+                    <p class="column__txt"><a href="" class="icon-mail"></a> escorpionproducciones2017@gmail.com </p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Siguenos en:</h2>
+                    
+                    <p class="column__txt"><a href="https://www.facebook.com/sp.sas.583" class="icon-facebook">Facebook</a> </p>
+                    
+                    <p class="column__txt"><a href="" class="icon-twitter">Siguenos en Twitter</a> Siguenos en Twitter</p>
+                    <p class="column__txt"><a href="" class="icon-youtube"> Visita nuestro canal en YouTube</a></p>
+                </div>
+                <p class="copy">© 2019 EVENTLITE || SCORPION PRODUCCIONES®</p>
+            </div>
+        </footer>
+    <script src="../js/form.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/menud.js"></script>    
+    <script src="../js/menu.js"></script>
+    <script src="assent/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assent/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assent/popper/popper.min.js"></script>  
+    <script src="assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+
+
+</body>
+</html>
+
+

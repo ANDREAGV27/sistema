@@ -1,0 +1,264 @@
+@font-face {
+    font-family:"Pacifico";
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family:"Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family:"Montserrat";
+    font-weight:bold;
+    src: url(../fonts/Montserrat-bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+.banner-registrarse{
+    width: 100%;
+    height: 200px;
+}
+.banner-registrar-img{
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+}
+.banner-registrarse:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 252px;
+    background: rgba(0,0,0,.65);
+    z-index: 1000;
+}
+.logo-contenedor-registrarse{
+    margin-top: 12px;
+    margin-left: 12px;
+    position: absolute;
+    height: 100px;
+    z-index: 1100;
+    width: 150px;
+    
+}
+.logo-florentina-register{
+    object-fit: contain;
+}
+
+.contenedor-datos-registrarse{
+    position: absolute;
+    color: white;
+    z-index: 1200;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 20px;
+}
+.data{
+    color: white;
+    z-index: 1300;
+    text-align: right;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+.title-registrarse{
+    position: absolute;
+    z-index: 1200;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+.caja-formulario{
+    margin-top: 15px;
+}
+.titulo-formulario{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.form-register{
+    width: 94%;
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    border-radius: 7px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.form__titulo{
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+    border-top-left-radius:7px ;
+    border-top-right-radius:7px ;
+    border-bottom: 5px solid crimson;
+}
+.caja-barra{
+    width: 100%;
+    height: 60px;
+}
+.caja-barra-bottom{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 25px;
+}
+.barra-superior{
+    padding: 15px;
+    background: black;
+    width: 94%;
+    height: 100%;
+    margin: auto;
+    border-top-left-radius:25px ;
+    border-top-right-radius:25px ;
+}
+
+.caja-padre_img{
+    width: 100%;
+}
+.img-register{
+    width: 94%;
+    z-index: -1;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 3%;
+    height: 470px ;
+}
+
+.txt-barra_inferior{
+    color: black;
+    padding: 15px;
+    background: black;
+    width: 94%;
+    height: 100%;
+    margin: auto;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    bottom: 25px;
+}
+.contenedor-inputs{
+    padding: 0px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.primary{
+    margin-top: 15px;
+}
+.input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+.input-48{
+    width: 48%;
+}
+.input-100{
+    width: 100%;
+}
+.btn-enviar{
+    background: crimson; 
+    color: #fff;
+    margin: auto;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.btn-enviar:hover{
+    background: rgb(150,14,41);
+}
+.btn-enviar:active{
+    transform: scale(1.05);
+}
+.form__link{
+    width: 100%;
+    margin: 7px;
+    text-align: center;
+    font-size: 13px;
+}
+.caja-btn-volver{
+    float: right;
+    background: rgba(0,0,0,0.1);
+}
+.btn-volver{
+    background: black;
+    width: 160px;
+    height: 70px;
+    color: white;
+    font-family: cursive;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition:.2s;
+    position: fixed; 
+    bottom: 0;
+    z-index: 2000;
+    margin-left: -160px;
+    border-top-left-radius:55px;
+    border-top-right-radius:55px;
+    border: 2px solid white; 
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 1px 1px 1px;
+}
+.btn-volver:hover{
+    background: red;
+    transition: .5s;
+    text-decoration:underline;
+}
+@media screen and (max-width:480px){
+    .img-register{
+        display: none;
+    }
+    .banner-registrar-img{
+        height: 250px;
+    }
+    .banner-registrar-img:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 280px;
+        background: rgba(0,0,0,.65);
+        z-index: -2;
+    }
+    .btn-volver{
+        background: black;
+        width: 90px;
+        height: 40px;
+        color: white;
+        font-family: cursive;
+        font-size: 1   1em;
+        cursor: pointer;
+        transition:.2s;
+        position: fixed; 
+        bottom: 0;
+        z-index: 2000;
+        margin-left: -90px;
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;
+        border: 2px solid white; 
+        text-decoration: none;
+        text-align: center;
+        padding: 2px 5px 5px 5px;
+    }
+}
+
+ 

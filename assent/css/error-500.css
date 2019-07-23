@@ -1,0 +1,36 @@
+.contendor-500 {
+    width: 100%;
+    margin: ;
+ 
+}
+.error-500-img{
+    width: 100%;
+    margin: 0;
+
+}
+.text-500{
+    font-family: cursive;
+    position: absolute;
+    font-size: 1.2em;
+    top: 99px;
+    margin-left: 20px;
+    color: white;
+    
+}
+.error-500-big{
+    display: none;
+}
+@media screen and (min-width:1200px) {
+    
+   .error-500-img{
+    display: none;
+    }
+    .error-500-big{
+        display: block;
+        width: 100%;
+        height: 598px;
+    }
+    .text-500{
+    display: none;
+    }
+}

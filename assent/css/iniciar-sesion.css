@@ -1,0 +1,174 @@
+*{
+    margin: 0px;
+}
+formulario-iniciar
+.encabezado{
+    margin-top: 0px;
+    width: 100%;
+    height: 120px;
+    background: rgb(0,0,0,.9);
+}
+.logo-iniciar{
+    margin-top: 20px;
+    width: 200px;;
+    margin: auto;
+}
+.logo-florentina-iniciar{
+    width: 200px;
+    position: absolute;
+    z-index: 80000;
+    margin-top: -30px;
+}
+.main-header__contactinfo{
+    z-index: 900000;
+}
+/*Banner*/
+
+
+.banner-iniciar {
+    margin-top: -95px;
+    position: relative;
+    
+}
+    /*opacidad banner*/
+.banner-iniciar:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+    top: 0;
+}
+.banner-iniciar__img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    z-index: 10000;
+}
+.contenedor-img-in:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    z-index: 110000;
+    top: 0;
+}
+.banner-iniciar__content{
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 1500;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(200%);
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+.contenedor{
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 40px;
+    width: 96%;
+    height: 70px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;        /*Tamaño de letra*/
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;    
+}
+/*Banner*/
+
+.picture{
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 360px;
+}
+.contenedor-img-in{
+    width: 96%;
+    position: absolute;
+    height: 360px;
+    z-index: -800;
+    margin-right: 2%;
+    margin-right: 2%;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -20;
+}
+.caja-circulo{
+    margin-top: 15px;
+    width: 96%;
+    height: 350px;
+    position: absolute;
+}
+.circulo{
+    background: rgb(209,209,209);
+    width: 275px;
+    height: 275px; 
+    border-radius: 50%;
+    margin-top: 25px;
+}
+.logo-user_in{
+    width: 150px;
+    margin-top: -272px;
+}
+.logo-user{
+    width: 50%;
+    margin:auto;
+    margin-top: 25px;
+}
+.caja_formulario-iniciar{
+    width: 215px;
+}
+.formulario-iniciar{
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+}
+.olvido__txt{
+    font-size: .7em;
+}
+.boton{
+    background: crimson;
+    color: white;
+    padding: 7px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton:active{
+    transform: scale(1.05);
+}.boton:hover{
+    background: rgb(150,14,41);
+}
+.barra-abajo{
+    color:azure;
+    background: black;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 70px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 20px;
+}
+.olvido{
+    padding: 20px;
+}
+@media screen and (min-width:480px){
+    
+    
+}
+
+

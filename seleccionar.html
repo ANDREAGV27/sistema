@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <title>Tropical Eléctro</title>
+        <link rel="stylesheet" href="assent/css/font.css"/>
+        <link rel="stylesheet" href="assent/css/seleccion.css"/>
+        <link rel="stylesheet" href="assent/css/estilo-arcordeon.css"/>
+        <link rel="stylesheet" href="assent/css/iniciar-sesion.css"/>
+        <link rel="stylesheet" href="assent/css/estilos.css"/>
+        <link rel="stylesheet" href="assent/css/registrarse.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="assent/plugins/animate.css/animate.css"/>
+        <link rel="stylesheet" href="assent/plugins/sweetAlert2/sweetalert2.min.css"/>
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container container--flex">
+
+                <img src="assent/img/logo-florentina.png" alt="" class="logo-florentina"/>
+                <div class="main-header__contactinfo column column--50">
+                    <p class="main-header__contactinfo__phone">
+                        <span class="icon-phone">317 368 8389</span>
+                    </p>
+                    <p class="main-header__contactinfo__address">
+                        <span class="icon-location">Av Primera de Mayo N° 69-38</span>
+                    </p>
+                </div>
+            </div>
+        </header>
+        <!--    Header -->
+
+        <!--    Barra Local-->
+        <nav class="main-nav tipoletra">
+            <div class="container container--flex">  
+                <span class="icon-menu" id="btnmenu"></span>
+                <ul class="menu" id="menu">
+                    <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
+                    <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
+                    <li class="menu__item"><a 
+                                              href="galeria.html" class="menu__link">Galería</a></li>
+                    <li class="menu__item"><a href="contacto.html" class="menu__link">Contactenos</a></li>
+                </ul>     
+                
+            </div>
+        </nav>
+        <!--    Barra Local-->
+        <style>
+            .tipoletra{
+                font-size: 1em;
+            }
+        </style>
+        <!--   Contenido   -->
+        <div class="caja-contenedor-seleccionar">
+            <div class="caja-genero">
+                <h1 class="genero__title">
+                    Popular
+                </h1>
+            </div>
+            <div class="caja-inf">
+                <div class="caja__logo">
+                    <img src="assent/img/seleccionar/logo.jpg" alt="" class="logo__caja"/>
+                </div>
+                <div class="caja__datos">
+                    <div class="caja__titulo_evento">
+                        <h1 class="titulo_evento">
+                            Royal Center 
+                        </h1>
+                    </div>
+                    <div class="caja__artistas_evento">
+                        <div class="datos-evento">
+                            <h3 class="datos">
+                                Dirección: &nbsp;&nbsp;AV 1º Mayo #51 - 22s, Bogotá D.C. <br/>
+                                Fecha: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 de Julio de 2019 <br/>
+                                Hora: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15:00h<br/>
+                                Duración: &nbsp;&nbsp;&nbsp;8 horas<br/><br/>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat aperiam odit iste tempore, maiores voluptates saepe
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="patrocinadores">
+                        <div class="caja_p_uno">
+                            <img  class="p_uno" src="assent/img/comprar/nectar_logo.png" />
+                        </div>
+                        <div class="caja_p_dos">
+                            <img  class="p_dos" src="assent/img/comprar/olimpica.png" />
+                        </div>
+                        <div class="caja_p_tres">
+                            <img  class="p_tres" src="assent/img/comprar/nectar_logo.png" />
+                        </div>
+                    </div>
+                    <img src="assent/img/comprar/fonodo-contenedor.png" alt="" class="datos__caja"/>          
+                </div>
+            </div>   
+            <div class="caja-titulos-localidad-a">
+                <div  class="titulos-localidad-a">
+                    Selecciona tu localidad
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="caja__decision">
+                <div class="cajas_btn btn___1">
+                    <a href="#palco"><h1>Palco</h1></a>
+
+                </div>
+                <div class="cajas_btn btn___2">
+                    <a href="#general"><h1>General</h1></a>
+                </div>
+            </div>
+
+
+            <div class="palcos-disponibles caja_palcos-disponibles">
+                <a class="palcos-disponibles_txt" name="palco">Palcos Disponibles</a>
+            </div>
+            <div class="caja__boton-comprar">
+                <center>
+                    <div class="localidad">
+                        <div id="acordeon">
+                            <div  class="item diamante">
+                                <div class="nombre" href="#">DIAMANTE</div>
+                                <h2  class="titulo-localidad">
+                                    <h3 class="titulo-l">PALCO-DIAMANTE</h3>
+                                </h2>
+                                <h5 class="descipcion-localidad">
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                </h5>
+                                <div class="caja-boton">
+                                    <button onclick="document.getElementById('id01').style.display='block'" class="palco-diamante">
+                                        ¡RESERVAR AHORA!
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="item oro">
+                                <div class="nombre" href="#">ORO</div>
+                                <h2 class="titulo-localidad">
+                                    <h3 class="titulo-l">PALCO-ORO</h3>
+                                </h2>
+                                <h5 class="descipcion-localidad">
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                </h5>
+                                <div class="caja-boton">
+                                    <button onclick="document.getElementById('id02').style.display='block'"  class="palco-oro">
+                                        ¡RESERVAR AHORA!
+                                    </button>
+                                </div>
+                            </div>        
+                            <div class="item plata">
+                                <div class="nombre" href="#">PLATA</div>
+                                <h2 class="titulo-localidad">
+                                    <h3 class="titulo-l">PALCO-PLATA</h3>
+                                </h2>
+                                <h5 class="descipcion-localidad">
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                </h5>
+                                <div class="caja-boton">
+                                    <button onclick="document.getElementById('id03').style.display='block'" class="palco-plata">
+                                        ¡RESERVAR AHORA!
+                                    </button>
+                                </div>
+                            </div>    
+                            <div class="item bronce">
+                                <div class="nombre" href="#">BRONCE</div>
+                                <h2 class="titulo-localidad">
+                                    <h3 class="titulo-l">PALCO-BRONCE</h3>
+                                </h2>
+                                <h5 class="descipcion-localidad">
+                                    <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                </h5>
+                                <div class="caja-boton">
+                                    <button onclick="document.getElementById('id04').style.display='block'" class="palco-bronce">
+                                        ¡RESERVAR AHORA!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="caja__general-disponible">
+                <div class="caja_palcos-disponibles">
+                    <a class="palcos-disponibles_txt" name="general">General Disponible</a>
+                </div>
+                <div class="caja__boton-comprar">
+                    <center>
+                        <div class="localidad">
+                            <div id="acordeon">       
+                                <div class="item primer">
+                                    <div class="nombre" href="#">Primer Nivel</div>
+                                    <h2 class="titulo-localidad">
+                                        <h3 class="titulo-l">General - Segundo Nivel</h3>
+                                    </h2>
+                                    <h5 class="descipcion-localidad">
+                                        <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                    </h5>
+                                    <div class="caja-boton primer-nivel">
+                                        <button  onclick="document.getElementById('id05').style.display='block'" class="general-primer">
+                                            ¡RESERVAR AHORA!
+                                        </button>
+                                    </div>
+                                </div>    
+                                <div class="item segundo">
+                                    <div class="nombre" href="#">Sengundo Nivel</div>
+                                    <h2 class="titulo-localidad">
+                                        <h3 class="titulo-l">General - Primer Nivel</h3>
+                                    </h2>
+                                    <h5 class="descipcion-localidad">
+                                        <br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae id vitae magni! Sunt laboriosam atque magnam mollitia consequuntur voluptatem voluptas eaque. Tempore itaque neque quam ipsam corporis tempora, cupiditate alias.
+                                    </h5>
+                                    <div class="caja-boton segundo-nivel">
+                                        <button onclick="document.getElementById('id06').style.display='block'"  class="general-segundo">
+                                            ¡RESERVAR AHORA!
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!--    Botón Volver   -->
+        <div class="caja-btn-volver">
+            <button>
+                <a class="btn-volver" href="comprar.html">Volver</a> 
+            </button>
+        </div>
+        <!--    Bdsotón Volver   -->
+        <!--   Boton Subir  -->
+        <style>   
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 2px;
+                z-index: 99;
+                font-size: 3em;
+                border: none;
+                outline: none;
+                background-color: aqua;
+                color: black;
+                cursor: pointer;
+                padding: 5px 5px 5px 5px;
+                border-radius: 25px;
+                left: 15px;
+                transition: .5s;
+            }
+
+            #myBtn:hover {
+                background-color:black;
+                color: aqua;
+                border: 2px solid white;
+                transition: .5s;
+            }
+        </style>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+        <script>
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 350) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+        <!--    MODAL DE DIAMANTE  INICIO  -->
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top modalReservar">
+                <header class="titulo-modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                          class="btn-cerrar">&times;</span>
+                    <h2>PALCO - DIAMANTE</h2>
+                </header>
+                <div class="w3-container">
+                    <center>
+                        <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                            <h3>Confirmar</h3>
+                            <div class="">
+                                <br/>
+                                <label>Tipo de boleta</label>
+                                <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" >
+                                <option value="">Palco - Oro</option>
+                                </select>
+
+                            <br/>
+                            <br/>
+
+                            <br/>
+                            <br/>
+                            <label>Ingrese la cantidad de boletas</label>
+                            <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                            <br/><br/>
+                            <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                            <br/><br/>
+                            </div>
+                        </form>
+                    </center>
+            </div>
+            <footer class="footer_modal">
+            </footer>
+        </div>
+        </div>
+    <!--    MODAL DE DIAMANTE  FINAL  -->
+    <!--    MODAL DE ORO  INICIO  -->
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top modalReservar">
+            <header class="titulo-modal-oro">
+                <span onclick="document.getElementById('id02').style.display='none'" 
+                      class="btn-cerrar">&times;</span>
+                <h2>PALCO - ORO</h2>
+            </header>
+            <div class="w3-container">
+                <center>
+                    <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                        <h3>Confirmar</h3>
+                        <div class="">
+                            <br/>
+                            <label>Tipo de boleta</label>
+                            <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" />
+                            <option value="">Palco - Oro</option>
+                            </select>
+
+                        <br/>
+                        <br/>
+
+                        <br/>
+                        <br/>
+                        <label>Ingrese la cantidad de boletas</label>
+                        <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                        <br/><br/>
+                        <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                        <br/><br/>
+                        </div>
+                    </form>
+                </center>
+        </div>
+        <footer class="footer_modal-oro">
+        </footer>
+    </div>
+    </div>
+<!--    MODAL DE ORO  FINAL  -->
+<!--    MODAL DE PLATA  INICIO  -->
+<div id="id03" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top modalReservar">
+        <header class="titulo-modal-plata">
+            <span onclick="document.getElementById('id03').style.display='none'" 
+                  class="btn-cerrar">&times;</span>
+            <h2>PALCO - PLATA</h2>
+        </header>
+        <div class="w3-container">
+            <center>
+                <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                    <h3>Confirmar</h3>
+                    <div class="">
+                        <br/>
+                        <label>Tipo de boleta</label>
+                        <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" />
+                        <option value="">Palco - Oro</option>
+                        </select>
+
+                    <br/>
+                    <br/>
+
+                    <br/>
+                    <br/>
+                    <label>Ingrese la cantidad de boletas</label>
+                    <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                    <br/><br/>
+                    <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                    <br/><br/>
+                    </div>
+                </form>
+            </center>
+    </div>
+    <footer class="footer_modal-plata">
+    </footer>
+</div>
+</div>
+<!--    MODAL DE PLATA  FINAL  -->
+<!--    MODAL DE bronce  INICIO  -->
+<div id="id04" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top modalReservar">
+        <header class="titulo-modal-bronce">
+            <span onclick="document.getElementById('id04').style.display='none'" 
+                  class="btn-cerrar">&times;</span>
+            <h2>PALCO - BRONCE</h2>
+        </header>
+        <div class="w3-container">
+            <center>
+                <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                    <h3>Confirmar</h3>
+                    <div class="">
+                        <br/>
+                        <label>Tipo de boleta</label>
+                        <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" />
+                        <option value="">Palco - Oro</option>
+                        </select>
+
+                    <br/>
+                    <br/>
+
+                    <br/>
+                    <br/>
+                    <label>Ingrese la cantidad de boletas</label>
+                    <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                    <br/><br/>
+                    <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                    <br/><br/>
+                    </div>
+                </form>
+            </center>
+    </div>
+    <footer class="footer_modal-bronce">
+    </footer>
+</div>
+</div>
+<!--    MODAL DE bronce  FINAL  -->
+<!--    MODAL DE primer  INICIO  -->
+<div id="id05" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top modalReservar">
+        <header class="titulo-modal-primer">
+            <span onclick="document.getElementById('id05').style.display='none'" 
+                  class="btn-cerrar">&times;</span>
+            <h2>GENERLA PRIMER NIVEL</h2>
+        </header>
+        <div class="w3-container">
+            <center>
+                <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                    <h3>Confirmar</h3>
+                    <div class="">
+                        <br/>
+                        <label>Tipo de boleta</label>
+                        <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" />
+                        <option value="">Palco - Oro</option>
+                        </select>
+
+                    <br/>
+                    <br/>
+
+                    <br/>
+                    <br/>
+                    <label>Ingrese la cantidad de boletas</label>
+                    <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                    <br/><br/>
+                    <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                    <br/><br/>
+                    </div>
+                </form>
+            </center>
+    </div>
+    <footer class="footer_modal-primer">
+    </footer>
+</div>
+</div>
+<!--    MODAL DE primer  FINAL  -->
+<!--    MODAL DE segundo  INICIO  -->
+<div id="id06" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top modalReservar">
+        <header class="titulo-modal-segundo">
+            <span onclick="document.getElementById('id06').style.display='none'" 
+                  class="btn-cerrar">&times;</span>
+            <h2>GENERAL SEGUNDO NIVEL</h2>
+        </header>
+        <div class="w3-container">
+            <center>
+                <form action="registrar.php" method="post" class="fmr" onsubmit="return seleccionar();">
+                    <h3>Confirmar</h3>
+                    <div class="">
+                        <br/>
+                        <label>Tipo de boleta</label>
+                        <select  type="mail" id="correo" placeholder="exampli@correo.com.co" class="input-reserva"  onkeypress="return sololetras(event)" onpaste="return false" />
+                        <option value="">Palco - Oro</option>
+                        </select>
+
+                    <br/>
+                    <br/>
+
+                    <br/>
+                    <br/>
+                    <label>Ingrese la cantidad de boletas</label>
+                    <input type="number" id="cantidad" name="correo" placeholder="#"  max="8" min="1"  class="input-reserva"/>
+                    <br/><br/>
+                    <input type="submit" value="Realizar reserva" class="boton-reservar"/>
+                    <br/><br/>
+                    </div>
+                </form>
+            </center>
+    </div>
+    <footer class="footer_modal-segundo">
+    </footer>
+</div>
+</div>
+<!--    MODAL DE segundo  FINAL  -->
+<style>
+    *{
+    }
+    .btn-cerrar{
+        padding: 0px 8px 0px 8px;
+        background: red;
+        float:right;
+        text-align: center;
+        margin: auto;
+        color: white;
+        font-size: 2em;
+        transition: .1s ;
+        border-top-right-radius: 10px;
+    }
+    .btn-cerrar:hover{
+        background: black;
+        transition: .1s ;
+    }
+    .titulo-mo.dal h2{
+        background-image: url(assent/img/seleccionar/hover-diamante.gif);
+        text-align: center;
+        padding: 2px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    h2{
+        font-family: cursive;
+    }
+    .modalReservar{
+        border-radius: 10px;
+    }
+    .titulo-modal h2{
+        background-image: url(assent/img/seleccionar/hover-diamante.gif);
+        text-align: center;
+        padding: 2px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal{
+        background-image: url(assent/img/seleccionar/hover-diamante.gif);
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    .input-reserva{
+        width: 90%;
+        text-align: center;
+        border: 1px solid black;
+        height: 30px;
+    }
+    .boton-reservar{
+        width: 50%;
+        height: 50px;
+        background: crimson;
+        color: white;
+        font-size: 1em;
+    }
+    /*          ESTILOS DIAMANTE FIN   */
+    /*          ESTILOS ORO INICIO   */
+    .titulo-modal-oro h2{
+        background-image: url(assent/img/seleccionar/hover-oro.gif);
+        text-align: center;
+        padding: 2px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal-oro{
+        background-image: url(assent/img/seleccionar/hover-oro.gif);
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    /*          ESTILOS ORO FIN   */
+    /*          ESTILOS PLATA INICIO   */
+    .titulo-modal-plata h2{
+        background-image: url(assent/img/seleccionar/hover-plata.gif);
+        text-align: center;
+        padding: 2px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal-plata{
+        background-image: url(assent/img/seleccionar/hover-plata.gif);
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    /*          ESTILOS PLATA FIN   */
+    /*          ESTILOS BRONCE INICIO   */
+    .titulo-modal-bronce h2{
+        background-image: url(assent/img/seleccionar/hover-bronce.gif);
+        text-align: center;
+        padding: 2px;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal-bronce{
+        background-image: url(assent/img/seleccionar/hover-bronce.gif);
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    /*          ESTILOS BRONCE FIN   */
+    /*          ESTILOS PRIMER INICIO   */
+    .titulo-modal-primer h2{
+        background-image: url(assent/img/seleccionar/hover-general-primer.gif);
+        background-size: contain;
+        text-align: center;
+        padding: 2px;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal-primer{
+        background-image: url(assent/img/seleccionar/hover-general-primer.gif);
+        background-size: contain;
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    /*          ESTILOS PRIMER FIN   */
+    /*          ESTILOS SEGUNDO INICIO   */
+    .titulo-modal-segundo h2{
+        background-image: url(assent/img/seleccionar/hover-general-segundo.gif);
+        background-size: contain;
+        text-align: center;
+        padding: 2px;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .footer_modal-segundo{
+        background-image: url(assent/img/seleccionar/hover-general-segundo.gif);
+        background-size: contain;
+        height: 40px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+    form{
+        z-index:inherit;
+    }
+
+    /*          ESTILOS SEGUNDO FIN   */
+</style>
+
+
+<footer class="main-footer">
+    <div class="container container--flex">
+        <div class="column column--33">
+            <h2 class="column__title">¿Por qué visitarnos?</h2>
+            <p class="column__txt why">Brindamos el mejor servicio en el montaje y logística de eventos en Bogota, contamos con un gran repertorio de artistas y shows según el gusto musical de cada cliente, atención personalizada y profesionalismo.</p>
+        </div>
+        <div class="column column--33">
+            <h2 class="column__title">Contactanos</h2>
+            <p class="column__txt"><a href="" class="icon-location"></a>Av Primera de Mayo N° 69-38. </p>
+            <p class="column__txt"><a href="" class="icon-phone"></a>317 368 8389</p>
+            <p class="column__txt"><a href="" class="icon-mail"></a> escorpionproducciones2017@gmail.com </p>
+        </div>
+        <div class="column column--33">
+            <h2 class="column__title">Siguenos en:</h2>
+
+            <p class="column__txt"><a href="https://www.facebook.com/sp.sas.583" class="icon-facebook">Facebook</a> </p>
+
+            <p class="column__txt"><a href="" class="icon-twitter">Siguenos en Twitter</a> Siguenos en Twitter</p>
+            <p class="column__txt"><a href="" class="icon-youtube"> Visita nuestro canal en YouTube</a></p>
+        </div>
+        <p class="copy">© 2019 EVENTLITE || SCORPION PRODUCCIONES®</p>
+    </div>
+</footer>
+<script src="assent/js/validacion/formulario/seleccionar.js"></script>
+<script src="assent/jquery/jquery-3.3.1.min.js"></script>
+<script src="assent/popper/popper.min.js"></script>  
+<script src="assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+<script src="assent/js/app.js"></script>
+<script src="assent/js/menud.js"></script>    
+<script src="assent/js/menu.js"></script>
+</body>
+
+</html>

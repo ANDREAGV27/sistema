@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="Assent/css/estilos.css"/>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css"/>
+        <link rel="stylesheet" href="Assent/styles.css"/>
+    </head>   
+
+    <body>
+        <div class="header">
+
+            <a href="../index.html"><img class="icon_exit" src="Assent/img/icon-exit.png"/></a>
+            <h1 class="titulo-menu2">DASHDOARD</h1>
+            <style>
+                .icon_exit{
+                    width: 25px;
+                    float: right;
+                    margin-right: 20px;
+                    margin-top: 5px;
+                    padding: 5px;   
+                    transition: .5s;
+                }
+                .icon_exit:hover{
+                    background: red;
+                    border-radius: 15px;
+                }
+            </style>
+        </div>
+
+        <div class="caja_principal">
+            <div class="caja_accordion1">
+                <div class="caja-titulo-menu">
+                    <br/>
+                    <h1 class="titulo-menu">DASHDOARD</h1>
+                </div>
+                <div >
+                    <h3 class="titulo-menu">Menú</h3>
+                </div>
+                <ul id="accordion" class="accordion menu">
+
+                    <li class="">
+                        <div class="link"><i class="icon-eventos"></i>Planificación de evento <i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a target="iframe" href="crear-evento.html">Crear evento</a></li>
+
+                            <li><a target="iframe" href="agregar-artista.html">Agregar artista</a></li>
+
+                            <li><a target="iframe" href="agregar-patrocinador.html">Agregar patrocinador</a></li>
+
+                            <li><a target="iframe" href="asignar-escenario.html">Agregar escenario</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="link"><i class="icon-doc"></i>Listas<i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a target="iframe" href="lista-eventos.html">Eventos</a></li>
+                            <li><a target="iframe" href="lista-artistas.html">Artistas</a></li>
+                            <li><a target="iframe" href="lista-patrocinadores.html">Patrocinadores</a></li>
+                            <li><a target="iframe" href="lista-escenarios.html">Escenarios</a></li>
+                            <li><a target="iframe" href="Assent/tablas/usuarios.php">Usuarios</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="link"><i class="icon-boleteria"></i>Control y reserva de boletería<i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+
+                            <li><a target="iframe" href="administrar-usuarios.html">Administrar usuarios</a></li>
+                            <li><a target="iframe" href="validar-reserva.html">Validar reservas</a></li>
+                            <li><a target="iframe" href="boletas-vendidas.html">Boletas vendidas</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link"><i class="icon-ingresos"> </i> Ingresos y egresos <i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a target="iframe" href="registrar-venta_boletas.html">Registrar venta de boletas</a></li>
+                            <li><a target="iframe" href="reportar-asistencia.html">Reportar asistencia</a></li>
+                            <li><a target="iframe" href="reportar-ventas.html">Reportar Ventas</a></li>
+                            <li><a target="iframe" href="../error-500.html">Consultar reportes</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="link"><i class="icon-doc"></i>Documentos<i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a target="area_trabajo" href="Assent/docs/casosUso.docx">Especificación Casos de uso</a></li>
+                            <li><a target="iframe" href="Assent/docs/IEEE.docx">IEEE 830</a></li>
+                            <li><a target="iframe" href="Assent/docs/arquitectura.docx">Arquitectura</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="area_trabajo caja-iframe">
+            <!-- ............................. BARRA MENU ............................ -->
+            <style type="text/css">
+
+                * {
+                    margin:0px;
+                    padding:0px;
+                }
+
+                #header {
+                    margin:auto;
+                    width: 100%;
+                    font-family:Arial, Helvetica, sans-serif;
+                    background: red;
+                }
+
+                ul, ol {
+                    list-style:none;
+                }
+                .nav{
+                    position: absolute;
+                }
+
+                .nav > li {
+                    float:left;
+                }
+
+                .nav li a {
+                    background-color:#000;
+                    color:#fff;
+                    text-decoration:none;
+                    padding:10px 12px;
+                    display:block;
+                }
+
+                .nav li a:hover {
+                    background-color:#434343;
+                }
+
+                .nav li ul {
+                    display:none;
+                    position:absolute;
+                    min-width:140px;
+                }
+
+                .nav li:hover > ul {
+                    display:block;
+                }
+
+                .nav li ul li {
+                    position:relative;
+                }
+
+                .nav li ul li ul {
+                    right:-140px;
+                    top:0px;
+                }
+                .caja-menu{
+                    background: blue;
+                    width: 50%;
+                    height: 500px;
+                }
+                .menu{
+                    width: 100%;
+                }
+                .barra-menu{
+                    width: 100%;
+                    height: 40px;
+                    background: black; 
+                }
+                .btn{
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+                .menu-para_celulares{
+                    display: ;
+                }
+
+                @media screen and (max-width:768px){
+                    .titulo-footer{
+                        font-size: 1.2em;
+                    }
+                }
+            </style>
+
+            <script type="text/javascript">
+                function mostrar() {
+                    document.getElementById('caja').style.display = 'block';
+                }
+                function ocultar() {
+                    document.getElementById('caja').style.display = 'none';
+                }
+
+                function mostrar_ocultar() {
+                    var caja = document.getElementById("caja");
+
+                    if (caja.style.display == "none") {
+                        mostrar();
+                        document.getElementById(botones).value = "mostrar";
+                    } else {
+                        ocultar();
+                        document.getElementById(botones).value = "ocultar";
+                    }
+                }
+            </script>
+
+            <div class="menu-para_celulares">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                    <h3 class="section-subheading text-muted"></h3>
+                    <div class="barra-menu">
+                        <a id="botones" value="leer mas" onclick="mostrar_ocultar();"><img class="btn" src="Assent/img/menu.png" /></a>
+                    </div>
+                    <div id="caja" style="display: none;">
+                        <div id="header">
+                            <ul class="nav">
+                                <li><a class="menu">Eventos</a>
+                                    <ul>
+                                        <li><a target="iframe" href="crear-evento.html">Crear Evento</a></li>
+                                        <li><a target="iframe" href="agregar-artista.html">Agregar Artista</a></li>
+                                        <li><a target="iframe" href="agregar-patrocinador.html">Agregar Patrocinador</a></li>
+                                        <li><a target="iframe" href="asignar-escenario.html">Agregar escenario</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="menu">Boletería</a>
+                                    <ul>
+                                        <li><a target="iframe" href="administrar-usuarios.html">Administrar Usuarios</a></li>
+                                        <li><a target="iframe" href="validar-reserva.html">Validar Reserva</a></li>
+                                        <li><a target="iframe" href="boletas-vendidas.html">Boletas Vendidas</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="menu">Ingresos</a>
+                                    <ul>
+                                        <li><a target="iframe" href="registrar-venta_boletas.html">Registrar Ventas de Boletas</a></li>
+                                        <li><a target="iframe" href="reportar-asistencia.html">Reportar Asistencia</a></li>
+                                        <li><a target="iframe" href="../error-500.html">Consultar Reportes</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--   .................  BARRA MENU..................   -->
+            <iframe src="inicio.html" class="iframe" width="100%" height="100%" name="iframe" id="iframe" frameborder="0">
+            </iframe>
+        </div>
+        <footer>
+            <div class="caja-footer">
+                <h1 class="titulo-footer">Scorpion Producciones ®</h1>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+        <script src="Assent/js/main.js"></script>
+    </body>
+</html>

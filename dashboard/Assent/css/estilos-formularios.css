@@ -1,0 +1,309 @@
+*{
+    margin: 0px;
+}
+body{
+    margin: 0;
+}
+/*               ................ CAJA TOTAL ; .................   */
+
+
+/*               ................ CAJA OPACA: ; .................   */
+
+.titulo{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.name_input{
+    margin-left: 5%;
+    color:white;
+    font-size: 1.3em;
+    position: relative;
+}
+.name_input_b{
+    margin-left: 5%;
+    color:white;
+    font-size: 1.2em;
+    position: relative;
+    top:-25px;
+}
+
+.formulario{
+    /*    background: black;*/
+    width: 50%;
+    height: 400px;
+    margin: auto;
+}
+.formulario-tabla{
+    width: 98%;
+    height: 400px;
+    margin: auto;
+}
+.label{
+    width: 100%;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 10px;
+    float: left;
+}
+.label_2_fecha{
+    width: 48%;
+    position: absolute;
+    float: right;
+    margin-left: 18%;
+
+}
+.label_2_seu{
+    width: 48%;
+    position: absolute;
+    float: right;
+    margin-left: 20%;
+
+}
+.r-fecha_b{
+    display: block;
+}
+.r-fecha_s{
+    display: none;
+}
+.contenedor-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  15px 0px 15px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}  
+.input_100{
+    width: 92%;
+}
+.input_48{
+    width: 45%;
+    display: flex;
+    float: left;
+}
+.btn2{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    border: 0px;
+    cursor: pointer;
+}
+.btn_submit{
+    background: aqua;
+    font-weight: 700;
+}
+.btn_reset{
+    background: red;
+    font-weight: 700;
+    color: white;
+}
+.btn_submit:hover{
+    background: rgb(11,120,125);
+    color: white;
+    
+}
+.btn_reset:hover{
+    background: rgb(156,7,12);
+    
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1300px){
+
+
+}
+
+@media screen and (max-width:1024px){
+    .btn2{
+        width: 48%;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .caja-form{
+        width: 98%;
+        transition: 1s;
+    }
+    .label_2_seu{
+        margin-left: 38%;
+    }
+    .formulario{
+        width: 80%;
+        transition: .5s;
+    }
+    .formulario-tabla{
+        width: 98%;
+        transition: .5s;
+    }
+    .label_2_fecha{
+        width: 48%;
+        position: absolute;
+        float: right;
+        margin-left: 40%;
+
+    }
+    .btn2{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .input_48{
+        width: 100%;
+    }
+    .r-fecha_b{
+        display: none;
+    }
+    .r-fecha_s{
+        display: block;
+    }
+
+    .caja-formulario{
+        width: 100%;
+        height: 730px;
+    }
+    .caja-form{
+        background: rgba(1,1,1,.8);
+        width: 98%;
+        height: 700px;
+        border-radius: 30px;
+        margin:auto;
+
+    }
+    .formulario{
+        width: 80%;
+        height: 530px;
+        margin: auto;
+    }
+    .formulario-tabla{
+        width: 98%;
+        height: 530px;
+        margin: auto;
+    }
+    .btn2{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:320px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.regla0{
+    width: 1300px;
+    background: purple;
+    height: 20px;
+    /*    display:none;*/
+}
+.regla{
+    width: 1024px;
+    background: yellow;
+    height: 20px;
+    /*    display:none;*/
+}
+.regla2
+{
+    width: 768px;
+    background: blue;
+    height: 20px;
+    /*    display:none;*/
+}
+.regla3{
+    width: 480px;
+    background: red;
+    height: 20px;
+    /*    display:none;*/
+}
+.regla4
+{
+    width: 320px;
+    background: green;
+    height: 20px;
+    /*    display:none;*/
+}

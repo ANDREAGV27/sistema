@@ -1,0 +1,200 @@
+@font-face {
+    font-family:"Pacifico";
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family:"Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family:"Montserrat";
+    font-weight:bold;
+    src: url(../fonts/Montserrat-bold.ttf);
+}
+
+body{
+    margin: 0;
+}
+.contenedor-perfil{
+    width: 100%;
+    height: 400px;
+    background: blue;
+}
+.iframe{
+    color: blue;
+    background: white;
+    height: 400px;
+    
+}
+h3{
+    color: aqua;
+    z-index: 2000;
+}
+.a{
+    color:black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.password{
+    font-size: 10px;
+}
+.contenedor-perfil{
+    width: 100%;
+    height: 400px;
+}
+.caja-iframe{
+    background:black;
+    width: 80%;
+    height: 400px;
+    float: right;
+    display: block;
+}
+.caja-menu{
+    float: left;
+    background: white;
+    width: 20%;
+    height: 400px;
+    display: none;
+}
+/*      000000000000 MENU CELULAR 000000000000 */
+.caja-menu2{
+    float: left;
+    background: rgb(212,212,212);
+    width: 20%;
+    height: 400px;
+    display: block;
+}
+
+.caja-menu2 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.caja-menu2 h2{
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    background: #2a2a2a;
+    margin-bottom: 30px;
+    color: white;
+}
+.caja-menu2 li{
+    border: 1px solid #2a2a2a;
+    padding: 10px;
+    cursor: pointer;
+    transition: .1s;
+}
+.caja-menu2 a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+.caja-menu2 li:hover{
+    background: white;
+    
+}
+.icon-img{
+    width: 50px;
+    margin-left: 20%;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*      000000000000 MENU COMPUTADOR 000000000000 */
+
+.sidebar{
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color: white;
+    display: none;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar h2{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background: #2a2a2a;
+    margin-bottom: 30px;
+}
+.sidebar li{
+    border: 1px solid #2a2a2a;
+    padding: 10px;
+    cursor: pointer;
+    transition: .1s;
+}
+.sidebar a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.sidebar li:hover{
+    background: #444;
+    border-left: 20px solid white;
+    transition: .2s;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+
+@media screen and (min-width: 600px){
+    .sidebar{
+    width: 100%;
+    height: 100%;
+    background: #333;
+    color: white;
+    display: block;
+    }
+    .caja-menu2{
+    float: left;
+    background: rgb(212,212,212);
+    width: 20%;
+    height: 400px;
+    display: none;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

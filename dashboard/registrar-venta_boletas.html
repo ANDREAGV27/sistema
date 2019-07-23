@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pl</title>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css">
+        <link rel="stylesheet" href="Assent/css/estilos.css">
+    </head>
+    <body>
+        <style>
+            .caja-formulario{
+                width: 100%;
+                background-image: url(Assent/img/background-area.jpg);
+                height: 100vh;
+            }
+            .caja-form{
+                background: rgba(1,1,1,.8);
+                width: 80%;
+                height: 480px;
+                border-radius: 30px;
+                margin:auto;
+
+            }
+        </style>
+
+        <div class="caja-formulario">
+            <br/>
+            <br/>
+            <div class="caja-form">
+                <h1 class="titulo">Registrar venta de Boletas</h1>
+                <div class="formulario">
+                    <form action="">
+                        <label  class="label" for="manager">Código del evento</label>
+                        <input type="text" id="manager" class="contenedor-inputs input_100" placeholder="Ingrese el código del evento"/>
+
+
+                        <label  class="label" for="n_artista">Tipo de boleta</label>
+
+                        <select id="n_artista" type="text" class="contenedor-inputs input_100">
+                            <option value="popular">Seleccione</option>
+                            <option value="popular">Palco - Diamante</option>
+                            <option value="electronica">Palco - Oro</option>
+                            <option value="electronica">Palco - Plata</option>
+                            <option value="electronica">Palco - Bronce</option>
+                            <option value="electronica">General - 1º Nivel</option>
+                            <option value="electronica">General - 2º Nivel</option>
+                        </select>
+
+                        <label  class="label" for="tel">Ingrese la cantidad vendida</label>
+                        <input type="text" id="tel" class="contenedor-inputs input_100" placeholder="Ingrese el teléfono del manager"/>
+
+
+                        <br/>
+
+
+                        <center>
+                            <br/>
+                            <button class="btn_submit btn2" type="submit">Guardar</button>
+                            <button class="btn_reset btn2" type="reset">Borrar</button>
+                        </center>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

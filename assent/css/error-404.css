@@ -1,0 +1,32 @@
+.contendor-404 {
+    width: 100%;
+    margin-left: 3px;
+}
+.error-400-img{
+    width: 650px;
+    margin-left: 10px;
+}
+.text-404{
+    font-family: cursive;
+    position: absolute;
+    font-size: 1.2em;
+    margin-left: 20px;
+    
+}
+.error-400-big{
+    display: none;
+}
+@media screen and (min-width:1200px) {
+    
+   .error-400-img{
+    display: none;
+    }
+    .error-400-big{
+        display: block;
+        width: 100%;
+        height: 598px;
+    }
+    .text-404{
+    display: none;
+    }
+}

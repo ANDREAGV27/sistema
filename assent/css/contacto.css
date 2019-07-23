@@ -1,0 +1,176 @@
+.contact .container--flex{
+    align-items: flex-start
+}
+.contactinformation{    
+    padding: 10px;
+    padding-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #de423a;
+}
+.contactinformation .column__title{
+    font-family: 'pacifico', cursive;
+    font-weight: 100;
+}
+.contactinformation [class*="icon-"] {
+    font-size: 1.3em;
+    margin-right: 7px;
+    position: relative;
+    top: 5px;
+}
+.contactinformation .social-icon{
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.contactinformation .social-icon [class*="icon-"]{
+    background: black;
+    color: white;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+/*Formulario*/
+
+
+.formulario{
+    padding: 10px;
+    top: 0;
+    
+}
+.formulario__label,.formulario__input-txt, .formulario__textarea {
+    display: block;
+    width: 100%;
+}
+.formulario__input-txt {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.formulario__textarea {
+    max-height: 10px;
+    min-width: 100%;
+/*
+    border-bottom-right-radius: ;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px
+*/
+    max-width: 100%;
+    max-height: 50px;
+}
+.formulario__btn {
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+
+/*MAPA*/
+.column__txt-direction{
+    text-align: center;
+    
+}
+
+.img__sena {
+    width: 90%;
+    margin-bottom:50px;
+    padding: 20px;
+    margin-right: 10%;
+    margin-left: 8%;
+}
+.mapa__paper{
+    width: 100%;
+}
+.mapa__hd{
+    widows: 100%;
+}
+
+
+/*-----------------------Estilos Responsive------------------*/
+@media screen and (min-width:480px) {
+    .contactinformation p{
+        font-size: .75em;
+        
+    }
+    .contactinformation {
+        border-right: 1px solid #de423a;
+        border-bottom: none;
+    }
+
+
+/*MPA*/
+
+    .mapa__img {
+    width: 95%;
+    }
+    .img__sena {
+    width: 90%;
+    margin-bottom:50px;
+    }
+    .mapa__img {
+        height: 250px;
+    }
+    
+}
+@media screen and (max-width:500px){
+    .mapa__hd{
+        display: none;
+    }
+    .email_{
+        display: none;
+    }
+}
+@media screen and (min-width:786px) {
+    .contactinformation p {
+        font-size: 1em;
+    }
+    .contactinformation .column__title{
+        font-size: 2em;
+    }
+    .img__sena {
+    width: 90%;
+    padding: 10%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    margin-top: 25%;
+    }
+    
+}
+
+
+@media screen and (min-width:1024px) {
+    .img__sena {
+    object-fit: cover;
+    width: 60%;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+@media screen and (max-width:600px)  {
+    .main-header{
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    
+    
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

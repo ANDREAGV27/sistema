@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>General</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="assent/css/registrarse.css"/>
+    <link rel="stylesheet" href="assent/css/font.css"/>
+    <link rel="stylesheet" href="assent/plugins/animate.css/animate.css"/>
+<link rel="stylesheet" href="assent/plugins/sweetAlert2/sweetalert2.min.css"/>
+
+</head>
+<body>
+
+    <div class="caja-general">
+        <center>
+            <br/>
+            <br/>
+            <h1>CAMBIAR CONTRASEÑA</h1>
+            <br/>
+            <form action="registrar.php" method="post" class="form-cambios" onsubmit="return validar();">
+                    <div class="contenedor-inputs">
+                        <h3>Ingrese su contraseña anterior</h3>
+                        <input type="password" id="claveanterior" name="clave" placeholder="Contraseña anterior" class="input-100 input"  />
+                        
+                        <h3>Ingrese una nueva contraseña</h3>
+                        <input type="password" id="clave" name="clave" placeholder="Nueva contraseña" class="input-100 input"  />
+                        <input type="password" id="claveconfirmar" name="clave" placeholder="Confirmar contraseña" class="input-100 input"  />
+                        
+                        <input type="submit" value="Cambiar contraseña" class="btn-enviar "/>
+                        
+                    </div>
+                </form>
+        </center>  
+    </div>
+    <style>
+        *{
+            margin: 0;
+        }
+        .form-cambios{
+            width: 50%;
+            color: none;
+        }
+        .caja-general{
+            width: 100%;
+            background-image: url(assent/img/area-trabajo/geneal.jpg);
+            height: 400px;
+            background-size: cover;
+            
+        }
+        .formularios{
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 50%;
+        }
+        h3{
+            color: white;
+        }
+        h2{
+            color: rgba(0,0,0,.5);
+        }
+        @media screen and (max-width:750px){
+            .form-cambios{
+            width: 100%;
+            }
+            h1{
+                font-size: 1em;
+            }
+            .btn-enviar{
+                width: 100%;
+            }
+            h3{
+                font-size: .8em;
+            }
+            
+        }
+    </style>
+    <script src="assent/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assent/popper/popper.min.js"></script>  
+    <script src="assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+
+
+    <script src="assent/js/validacion/formulario/areacontrasena.js"></script>
+</body>
+</html>

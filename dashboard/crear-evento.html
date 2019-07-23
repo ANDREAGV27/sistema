@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Pl</title>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css"/>
+        <link rel="stylesheet" href="Assent/css/estilos.css"/>
+    </head>
+    <body>
+        <style>
+            .caja-formulario{
+                width: 100%;
+                background-image: url(Assent/img/background-area.jpg);
+                height: 710px;
+            }
+            .caja-form{
+                background: rgba(1,1,1,.8);
+                width: 80%;
+                height: 680px;
+                border-radius: 30px;
+                margin:auto;
+
+            }
+
+            @media screen and (max-width:430px){
+                .caja-formulario{
+                    height: 770px;
+                }
+                .caja-form{
+                    height: 740px;
+
+                }
+            }
+
+
+
+
+
+        </style>
+        <script>
+            function validar_evento(){
+
+                var nombre, escenario, genero, fecha;
+
+                nombre = document.getElementById("nombre").value;
+                escenario = document.getElementById("escenario").value;
+                genero = document.getElementById("genero").value;
+                fecha = document.getElementById("fecha").value;
+
+                if(nombre==="" || escenario==="" || genero===""  || fecha===""){
+                    Swal.fire(
+                        'Se detectaron campos vacios',
+                        'Completa todos los campos para continuar',
+                        'question'
+                    );
+                    return false;
+                }
+                if
+                    (nombre.length>=30){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Error...',
+                            text: 'El nombre es muy largo, debe tener máximo 30 caracteres',
+                            footer: ''
+                        });
+                        return false;
+                    }
+                if
+                    (nombre.length<4){
+
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Error...',
+                            text: 'El nombre es muy corto, debe tener minimo 5 caracteres',
+                            footer: ''
+                        });        
+                        return false;
+                    }
+                Swal.fire({
+                    type: 'error',
+                    title: 'Error...',
+                    text: 'El nomasdsades',
+                    footer: ''
+                });
+
+                return true;
+            }
+            function sololetras(e) {
+                key=e.keyCode || e.which;
+
+                teclado=String.fromCharCode(key).toLowerCase();
+
+                letras="qwertyuiopasdfghjklñzxcvbnm ";
+
+                especiales="8-37-38-46-164";
+
+                teclado_especial=false;
+
+                for(var i in especiales){
+                    if(key==especiales[i]){
+                        teclado_especial=true;
+                        break;
+                    }
+                }
+
+                if(letras.indexOf(teclado)==-1 && !teclado_especial){
+                    return false;
+                }
+
+            }
+        </script>
+        
+        <div class="caja-formulario">
+            <br/>
+            <div class="caja-form">
+                <br/>
+                <h1 class="titulo">Crear nuevo evento</h1>
+                <div class="formulario">
+                    <form action="" method="post" onsubmit="return validar_evento();">
+
+
+                        <label  class="label" for="nombre">Nombre del evento</label>
+
+                        <input type="text" id="nombre" name="nombre" class="contenedor-inputs input_100" placeholder="Ingrese el nombre del evento"  onkeypress="return sololetras(event)" onpaste="return false" />
+
+                        <br/>
+                        <label  class="label" for="escenario"> Escenario </label>
+
+                        <input type="text" id="escenario" name="escenario" class="contenedor-inputs input_100" placeholder=" Ingrese el nombre del establesimiento " onkeypress="return sololetras(event)" onpaste="return false" />
+
+
+                        <br/>
+                        <label  class="label" for="genero"> Género Músical </label>
+                        <select type="text" id="genero" name="genero" class="contenedor-inputs input_100">
+                            <option> Seleccione... </option>
+                            <option> Popular </option>
+                            <option> Salsa </option>
+                            <option> Electrónica </option>
+                            <option> Tropical </option>
+                        </select>
+
+
+                        <br/>
+                        <label  class="label" for="fecha"> Fecha </label>
+                        <input type="date" id="fecha" name="fecha" class="contenedor-inputs input_100" />
+
+                        <center>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <button class="btn_submit btn2" type="submit" name="btn">Guardar</button>
+                            <button class="btn_reset btn2" type="reset">Borrar</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+    </body>
+</html>

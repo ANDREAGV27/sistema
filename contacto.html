@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Contactenos</title>
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
+        <link rel="stylesheet" href="assent/css/estilos.css"/>
+        <link rel="stylesheet" href="assent/css/contacto.css"/>
+        <link rel="stylesheet" href="assent/css/font.css"/>
+        <script src="assent/js/validacion/formulario/contacto.js"></script>
+        <link rel="stylesheet" href="assent/plugins/animate.css/animate.css"/>
+        <link rel="stylesheet" href="assent/plugins/sweetAlert2/sweetalert2.min.css"/>
+    </head>
+    <header class="main-header">
+        <div class="container container--flex">
+            <img src="assent/img/logo-florentina.png" alt="" class="logo-florentina"/>
+            <div class="main-header__contactinfo column column--50">
+                <p class="main-header__contactinfo__phone">
+                    <span class="icon-phone">317 368 8389</span>
+                </p>
+                <p class="main-header__contactinfo__address">
+                    <span class="icon-location">Av Primera de Mayo N° 69-38</span>
+                </p>
+            </div>
+        </div>
+    </header>
+    <body>
+        <nav class="main-nav">
+            <div class="container container--flex">
+                <span class="icon-user" id="btnmenuu"></span>
+                <ul class="menuu" id="menuu">
+                    <li class="menu__item"><a href="iniciar-sesion.html" class="menu__link menu__link">Iniciar sesión</a></li>
+                    <li class="menu__item"><a href="registrarse.html" class="menu__link">Registrarse</a></li> 
+                </ul>
+                <span class="icon-menu" id="btnmenu"></span>
+                <ul class="menu" id="menu">
+                    <li class="menu__item"><a href="index.html" class="menu__link ">Inicio</a></li>
+                    <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
+                    <li class="menu__item"><a href="galeria.html" class="menu__link">Galería</a></li>
+                    <li class="menu__item"><a href="contacto.html" class="menu__link menu__link--select">Contactenos</a></li>
+                </ul>
+            </div>        
+        </nav>
+        <section class="banner">
+            <img src="assent/img/banner-contact.jpg" alt="" class="banner__img"/>
+            <div class="banner__content">Contacta con nosotros</div>
+        </section>
+        <main class="main">
+            <section class="group contact">
+                <h2 class="group__title">Contactenos</h2>
+                <div class="container container--flex">
+                    <div class="contactinformation column column--50">
+                        <h3 class="column__title">Información de contacto</h3>
+                        <p class="column__txt">¿Tienes alguna duda? ¿Quieres hacer reservas? ¿Necesitas más informacón?<br/><br/>No dudes en comunicarte con nosotros </p>
+                        <p class="column__txt"><span class="icon-phone"></span>  317 368 8389</p>
+                        <p class="column__txt"><span class="icon-phone"></span>  322 418 9503</p>
+
+                        <p class="column__txt email_"><span class="icon-correo"></span> escorpionproducciones2017@gmail.com</p>
+                        <div class="social-icon">
+                            <a href="https://www.facebook.com/sp.sas.583" class="social-icon__link"><span class="icon-facebook"></span></a>
+                            <a href="" class="social-icon__link"><span class="icon-twitter"></span></a>
+                            <a href="" class="social-icon__link"><span class="icon-youtube"></span></a> 
+                        </div>
+                    </div>
+                    <form action="" method="post" class="formulario column column--50" onsubmit="return contacto();">                  
+                        <laber class="formulario__label">Nombre</laber>
+                        <input id="nombrecontacto" onkeypress="return sololetras(event)" onpaste="return false" type="text" class="formulario__input-txt" name="nombre"/>
+                        <laber class="formulario__label">Correo</laber>
+                        <input id="correocontacto" type="email" class="formulario__input-txt" name="correo"/>
+                        <laber class="formulario__label">Teléfono</laber>
+                        <input id="telefonocontacto" type="text" class="formulario__input-txt" name="telefono"/>
+                        <laber class="formulario__label">Mensaje</laber>
+                        <textarea class="formulario__textarea" name="Mensaje" id="mensajecontacto"></textarea>
+                        <input type="submit" class="btn formulario__btn" value="Enviar mensaje"/>
+                    </form>
+                </div>
+            </section>
+            <section class="group contact">
+                <h2 class="group__title">Visitanos</h2>
+                <div class="container container--flex">
+
+                    <!--            -->
+                    <div class="contactinformation column column--50">
+                        <h3 class="column__title">Visitanos en nuestra cede</h3>
+                        <p class="column__txt">Nuestra sede esta alojada en Bogotá </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!4v1557713678815!6m8!1m7!1s1pS1SB6-7PatnmV-2q5OGw!2m2!1d4.614381103167314!2d-74.13563655636017!3f16.466942904457948!4f18.689780768591717!5f1.670873511688284" width="600" height="450" frameborder="0" style="border:0"  class="mapa__img mapa__hd"></iframe>
+
+                        <p class="column__txt-direction"><span class="icon-location"></span>  Av Primera de Mayo N° 69-38</p>
+
+                    </div>
+                    <form action="" method="post" class="formulario column column--50" >
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8854773501444!2d-74.13778058567486!3d4.614487696647753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f9d36ef1c17%3A0x39162d9e5711b996!2sTropical+El%C3%A9ctro!5e0!3m2!1ses-419!2sco!4v1557714551574!5m2!1ses-419!2sco" width="600" height="400" frameborder="0" style="border:0" class=" mapa__paper"></iframe>
+                    </form>
+
+                    <!--            -->
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <div class="container container--flex">
+                <div class="column column--33">
+                    <h2 class="column__title">¿Por qué visitarnos?</h2>
+                    <p class="column__txt why">Brindamos el mejor servicio en el montaje y logística de eventos en Bogota, contamos con un gran repertorio de artistas y shows según el gusto musical de cada cliente, atención personalizada y profesionalismo.</p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Contactanos</h2>
+                    <p class="column__txt"><a href="" class="icon-location"></a>Av Primera de Mayo N° 69-38. </p>
+                    <p class="column__txt"><a href="" class="icon-phone"></a>317 368 8389</p>
+                    <p class="column__txt"><a href="" class="icon-mail"></a> escorpionproducciones2017@gmail.com </p>
+                </div>
+                <div class="column column--33">
+                    <h2 class="column__title">Siguenos en:</h2>
+
+                    <p class="column__txt"><a href="https://www.facebook.com/sp.sas.583" class="icon-facebook">Facebook</a> </p>
+
+                    <p class="column__txt"><a href="" class="icon-twitter">Siguenos en Twitter</a> Siguenos en Twitter</p>
+                    <p class="column__txt"><a href="" class="icon-youtube"> Visita nuestro canal en YouTube</a></p>
+                </div>
+                <p class="copy">© 2019 EVENTLITE || SCORPION PRODUCCIONES®</p>
+            </div>
+        </footer>
+        <script src="assent/js/menud.js"></script>    
+        <script src="assent/js/menu.js"></script>
+        <script src="assent/jquery/jquery-3.3.1.min.js"></script>
+        <script src="assent/popper/popper.min.js"></script>  
+        <script src="assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>   
+    </body>
+</html>

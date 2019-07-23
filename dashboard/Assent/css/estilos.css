@@ -1,0 +1,374 @@
+@font-face {
+    font-family:"Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family:"Montserrat";
+    font-weight:bold;
+    src: url(../fonts/Montserrat-bold.ttf);
+}
+body{
+    font-family: 'Montserrat-regular', sans-serif;
+    background: gray;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/*    ------------   HEADER   -------------------  */
+.header{
+    width: 78%;
+    height: 10vh;
+    background: white;
+    float: right;
+}
+.titulo-menu2{
+    margin-top: -12px;
+    margin-left: 20px;
+    
+    
+}
+/*    ------------   HEADER   -------------------  */
+
+/*  caja-principal  caja_accordion1 */
+.caja-titulo-menu{
+    height: 80px;
+    border-bottom: 1px solid black;
+
+}
+.titulo-menu{
+    text-align: center;
+    padding: 15px;;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul{
+    list-style-type: none;
+}
+a{
+    color: black;
+    padding: 0px 0px 50px 50px;
+    text-decoration: none;
+
+}
+
+.accordion{
+    width: 100%;
+    background: antiquewhite; /*COLOR FONDO MENU-------- red  ----*/
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    float: left;
+    margin-top:-15px;
+    margin-top: -1px;
+}
+.titulo-menu{
+    background: antiquewhite;
+    margin-top: -12px;
+}
+.accordion .link{
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: black;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition:all 0.4s ease ;
+    transition: all 0.4s ease;
+}
+
+.accordion li i{
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease ;
+    -o-transition: all 0.4s ease ;
+    transition: all 0.4s ease ;
+}
+
+.accordion li i .icon-flecha{
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+.submenu{
+    display: none;
+    background: #444359;
+    font-size: 14px;
+}
+.submenu li {
+
+    border-bottom: 1px solid #4b4a5e;
+    display: block;
+}
+.submenu a{
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 15px;
+    font-size: 15px;
+    padding-left: 42px;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.submenu a:hover{
+
+    background: crimson;    
+}
+
+
+/*OPEN*/
+.accordion li i.icon-flecha{
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+
+}
+.accodion li.open .link {
+    color: crimson;
+    font-size: 20px;
+
+}
+.accordion li.open i {
+    color: crimson;
+    font-size: 20px;
+
+}
+.accordion li.open i.icon-flecha{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+/*    ------------   IFRAME   -------------------  */
+
+.area_trabajo{
+    float: right;
+    width: 78%;
+    height: 80vh;
+    margin-top:-15px;
+}
+
+
+.iframe{
+    background-image: url(../img/background-area.jpg);
+    background-size: cover;
+}
+
+/*    ------------   IFRAME   -------------------  */
+
+.caja_accordion1{
+    background: antiquewhite;
+    width: 22%;
+    height: 100vh;
+    float: left;
+
+}
+.caja_btn-menu{
+    width: 10%;
+    height: 550px;
+    background: black;
+    position: absolute;
+    display: none;
+    margin-left: 45px;
+}
+.btn-menu{
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.btn-menu:hover{
+    transform: rotate(180deg);
+    transition: .1s;
+    cursor: pointer;
+}
+h3{
+    background: white;
+    color: black;
+    font-size: 1.2em;
+}
+
+
+
+
+
+/*    ------------   FOOTER   -------------------  */
+
+.caja-footer{
+    width: 78%;
+    background: white;
+    height: 12vh;
+    float: right;
+
+}
+
+.titulo-footer{
+    margin: auto;
+    text-align: center;
+    margin-top: 25px
+
+}
+/*    ------------   FOOTER   -------------------  */
+
+
+
+
+/*    ------------   MENÚ RESPONSIVE   -------------------  */
+* {
+    margin:0px;
+    padding:0px;
+}
+
+#header {
+    margin:auto;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background: red;
+}
+
+ul, ol {
+    list-style:none;
+}
+.nav{
+    position: absolute;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.nav li a:hover {
+    background-color:#434343;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+.caja-menu{
+    background: blue;
+    width: 50%;
+    height: 500px;
+}
+.menu{
+    width: 100%;
+}
+.barra-menu{
+    width: 100%;
+    height: 40px;
+    background: black; 
+    display: none;
+}
+.btn{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/*    ------------   MENÚ RESPONSIVE   -------------------  */
+
+
+
+@media screen and (max-width:1300px){
+    .caja_accordion1{
+        width:23%;
+    }
+    .header, .area_trabajo, .caja-footer{
+        width: 77%;
+    }
+    .titulo-menu2{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .caja_accordion1{
+        width:31%;
+    }
+    .header, .area_trabajo, .caja-footer{
+        width: 69%;
+    }
+    .titulo-menu2{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .caja_accordion1{
+        display: none;
+    }
+    .header, .area_trabajo, .caja-footer{
+        width: 100%;
+    }
+    .barra-menu{
+        display: block;
+    }
+    .titulo-menu2{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:480px){
+
+}
+
+@media screen and (max-width:320px){
+
+
+}
+
+
+
+
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Pl</title>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css"/>
+        <link rel="stylesheet" href="Assent/css/estilos.css"/>
+    </head>
+    <body>
+        <style>
+            .caja-formulario{
+                width: 100%;
+                background-image: url(Assent/img/background-area.jpg);
+                height: 630px;
+            }
+            .caja-form{
+                background: rgba(1,1,1,.8);
+                width: 80%;
+                height: 590px;
+                border-radius: 30px;
+                margin:auto;
+
+            }
+
+            @media screen and (max-width:430px){
+                .caja-formulario{
+                    height: 810px;
+                }
+                .caja-form{
+                    height: 770px;
+
+                }
+            }
+        </style>
+        <script>
+            function asignar_escenario(){
+
+                var nombre, direccion, capacidad, telefono, correo, expresion;
+
+                nombre =  document.getElementById("nombre").value;
+                direccion =  document.getElementById("direccion").value;
+                capacidad =  document.getElementById("capacidad").value;
+                telefono =  document.getElementById("telefono").value;
+                correo =  document.getElementById("correo").value;
+                expresion = /\w+@+\w+\.+[a-z]/;
+
+                if  (nombre==="" ||  direccion==="" || capacidad==="" ||  telefono==="" ||  correo===""){
+
+                    Swal.fire(
+                        'Se detectaron campos vacios',
+                        'Completa todos los campos para continuar',
+                        'question'
+                    );
+                    return false;
+                }
+
+
+
+                // CORREO
+                // validar que es un correo
+                if  (!expresion.test(correo)){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error...',
+                        text: 'Correo no encontrado, verifique nuevamente',
+                        footer: ''
+                    });
+                    return false;
+                }
+                if
+                    (correo.length>=30){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Error...',
+                            text: 'El correo ingresado es muy extenso',
+                            footer: ''
+                        });
+                        return false;
+                    }
+
+                if
+                    (correo.length<8){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El correo ingresado es muy corto',
+                            footer: ''
+                        });
+                        return false;
+                    }
+
+
+                // NOMBRE
+                if
+                    (nombre.length>=15){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El nombre es muy largo, debe tener máximo 15 caracteres',
+                            footer: ''
+                        });
+                        return false;
+                    }
+                if
+                    (nombre.length<4){
+
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El nombre es muy corto, debe tener minimo 4 caracteres',
+                            footer: ''
+                        });        
+                        return false;
+                    }
+
+                // DIRECCIÓN
+
+                if (direccion.length>=30){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'La direccion es muy larga, debe contener máximo 30 caracteres',
+                        footer: ''
+                    });
+                    return false;
+                }
+                if (direccion.length<8){
+
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'La direccion es muy corta, debe contener minimo 8 caracteres',
+                        footer: ''
+                    });        
+                    return false;
+                }
+
+
+                // CAPACIDAD
+
+                if
+                    (capacidad.length>=10){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'La capacidad es muy extensa',
+                            footer: ''
+                        });
+                        return false;
+                    }
+                if
+                    (capacidad.length<=2){
+
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'La capacidad es muy corta',
+                            footer: ''
+                        });        
+                        return false;
+                    }
+                if  (isNaN(capacidad)){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error...',
+                        text: 'No se ingreso un valor numérico en la capacidad del escenario',
+                        footer: ''
+                    });
+                    return false;
+                }
+
+                // TELÉFONO
+
+                if  (isNaN(telefono)){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error...',
+                        text: 'No se ingreso un número teléfonico',
+                        footer: ''
+                    });
+                    return false;
+                }
+                // telefono
+                if
+                    (telefono.length===10 || telefono.length===7 ){
+                        return true;
+                    }else{
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Error...',
+                            text: 'El teléfono no es valido recuerde colocar un teléfono fijo o celular',
+                            footer: ''
+                        });
+                        return false;
+                    } 
+
+
+
+
+            }
+
+        </script>
+        <div class="caja-formulario">
+            <br/>
+
+            <div class="caja-form">
+                <br/>
+                <h1 class="titulo">Agregar Escenario</h1>
+                <div class="formulario">
+                    <form action="" method="post" onsubmit="return asignar_escenario()">
+
+
+                        <label  class="label" for="nombre">Nombre del Escenario</label>
+                        <input type="text" id="nombre" name="nombre" class="contenedor-inputs input_100" placeholder="Nombre del escenario" />
+
+                        <!--                        *****                    -->
+
+                        <label  class="label" for="direccion">Dirección</label>
+
+                        <label  class="label label_2_seu r-fecha_b" for="capacidad">Capacidad</label>
+
+                        <br/>
+                        <input id="direccion" name="direccion" type="text" class="contenedor-inputs input_48" placeholder="Dirección del escenario"/>
+
+
+                        <label  class="label r-fecha_s" for="capacidad">Capacidad</label>
+
+                        <input id="capacidad" name="capacidad" type="text" class="contenedor-inputs input_48" placeholder="Capacidad"/>
+
+                        <label  class="label" for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" class="contenedor-inputs input_100" placeholder="Correo del escenario"/>
+
+                        <label  class="label" for="correo">Correo</label>
+                        <input type="text" id="correo" name="correo" class="contenedor-inputs input_100" placeholder="Correo del escenario"/>
+
+
+                        <center>
+                            <br/>
+                            <button class="btn_submit btn2" type="submit">Guardar</button>
+                            <button class="btn_reset btn2" type="reset">Borrar</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>General</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="assent/css/registrarse.css"/>
+    <link rel="stylesheet" href="assent/css/font.css"/>
+    <script src="assent/js/validacion/formulario/cambios-validacion.js"></script>
+    <link rel="stylesheet" href="assent/plugins/animate.css/animate.css"/>
+<link rel="stylesheet" href="assent/plugins/sweetAlert2/sweetalert2.min.css"/>
+
+</head>
+<body>
+    <div class="caja-general">
+        <center>
+            <br/>
+            <br/>
+            <h1>DATOS PERSONALES</h1>
+            <form action="registrar.php" method="post" class="form-cambios" onsubmit="return validar();">
+                    <div class="contenedor-inputs">
+                        <input type="text" id="nombre" placeholder="Nombre" class="input-100 input" onkeypress="return sololetras(event)" onpaste="return false"  />
+                        
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" class="input-100 input" onkeypress="return sololetras(event)" onpaste="return false"  />
+                        
+                        <input type="email" id="correo" name="correo" placeholder="Correo" class="input-100 input"  />
+
+                         <input type="text" id="telefono" name="telefono" placeholder="Teléfono" class="input-100 input"   />
+                        
+                        <input type="submit" value="Guardar cambios" class="btn-enviar" />
+                    </div>
+                </form>
+        </center>  
+    </div>
+    <style>
+
+        *{
+            margin: 0;
+        }
+        .form-cambios{
+            width: 50%;
+        }
+        .caja-general{
+            width: 100%;
+            background-image: url(assent/img/area-trabajo/geneal.jpg);
+            height: 400px;
+            background-size: cover;
+            
+        }
+        .formularios{
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 50%;
+        }
+        @media screen and (max-width:500px){
+            .form-cambios{
+            width: 100%;
+            }
+            h1{
+                font-size: 1em;
+            }
+            .btn-enviar{
+                width: 100%;
+            }
+            
+        }
+    </style>
+    <script src="assent/jquery/jquery-3.3.1.min.js"></script>
+<script src="assent/popper/popper.min.js"></script>  
+<script src="assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+
+
+    
+</body>
+</html>

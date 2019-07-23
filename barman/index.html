@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="Assent/css/estilos.css"/>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css"/>
+        <link rel="stylesheet" href="Assent/styles.css"/>
+    </head>   
+
+    <body>
+        
+
+        <div class="header">
+
+        </div>
+
+        <div class="caja_principal">
+            <div class="caja_accordion1">
+                <div class="caja-titulo-menu">
+                    <br/>
+                    <h1 class="titulo-menu">BARMAN</h1>
+                </div>
+                <div >
+                    <h3 class="titulo-menu">Menú</h3>
+                </div>
+                <ul id="accordion" class="accordion menu">
+
+
+                    <li>
+                        <div class="link"><i class="icon-ingresos"></i>Ingresos y egresos<i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a target="iframe" href="registrar-bebidas.html">Regisrar bebidas</a></li>
+                            <li><a target="iframe" href="registrar-ventas.html">Reportar Ventas</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="link"><i class="icon-doc"></i>Reportes<i class="icon-flecha"></i></div>
+                        <ul class="submenu">
+                            <li><a >Consulatar reportes</a></li>
+                            <li><a >Estadistícas de ventas</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!--        ...........................................................................................................................                   -->
+        <div class="area_trabajo caja-iframe">
+            <!-- ............................. BARRA MENU ............................ -->
+
+
+
+
+            <script type="text/javascript">
+                function mostrar(){
+                    document.getElementById('caja').style.display='block';
+                }
+                function ocultar(){
+                    document.getElementById('caja').style.display='none';
+                }
+
+                function mostrar_ocultar(){
+                    var caja = document.getElementById("caja");
+
+                    if(caja.style.display == "none"){
+                        mostrar();
+                        document.getElementById(botones).value = "mostrar";
+                    }
+                    else{
+                        ocultar();
+                        document.getElementById(botones).value = "ocultar";
+                    }
+                }
+
+            </script>
+            <!--            ........... MENÚ PARA CELULARES................   -->
+            <div class="menu-para_celulares">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                    <h3 class="section-subheading text-muted"></h3>
+
+                    <div class="barra-menu">
+                        <a id="botones" value="leer mas" onclick="mostrar_ocultar();"><img class="btn" src="Assent/img/menu.png" /></a>
+                    </div>
+
+
+
+                    <div id="caja" style="display: none;">
+                        <div id="header">
+                            <ul class="nav">
+                                <li><a class="menu">Ingresos y egresos.</a>
+                                    <ul>
+                                        <li><a target="iframe" href="registrar-bebidas.html">Regisrar bebidas</a></li>
+                                        <li><a target="iframe" href="registrar-ventas.html">Reportar Ventas</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="menu">Reportes.</a>
+                                    <ul>
+                                        <li><a >Consulatar reportes</a></li>
+                                        <li><a >Estadistícas de ventas</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            ........... MENÚ PARA CELULARES................   -->            
+
+            <!--   .................  BARRA MENU..................   -->
+            <iframe src="inicio.html" class="iframe" width="100%" height="100%" name="iframe" id="iframe" frameborder="0">
+            </iframe>
+
+
+            <!--            .......................................    ................................................ ........................................................-->
+        </div>
+
+
+
+
+
+
+        <footer>
+            <div class="caja-footer">
+                <h1 class="titulo-footer">Scorpion Producciones ®</h1>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+        <script src="Assent/js/main.js"></script>
+    </body>
+</html>

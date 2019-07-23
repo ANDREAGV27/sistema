@@ -1,0 +1,678 @@
+*{
+    margin: 0px;
+    text-decoration: none;
+}
+.caja-contenedor-seleccionar{
+    background-image: url(../img/seleccionar/fondo-boton-bronce.jpg);
+    width: 100%;
+    height:17px;
+}
+z-index
+/*   */
+
+.btn_decision{
+    width: 200px;
+    height: 200px;
+    color: white;
+    margin: auto;
+}
+.cajas_btn{
+    width: 50%;
+    height: 150px;
+    background: black;
+    float:left;
+    margin-top: 50px;
+    font-size: 2.1em;
+    padding: 25px;
+    transition: .2s;
+    margin-bottom: 105px;
+}
+.cajas_btn:hover{
+    background: crimson;
+    cursor: pointer;
+    font-size: 2.2em;
+    
+}
+@media screen and (max-width:600px){
+    .cajas_btn{
+    width: 100%;
+    background: black;
+    display: block;
+    margin-top: -0px; 
+    height: 100px;
+    font-size: 1.2em;
+    }
+    .cajas_btn:hover{
+    background: crimson;
+    cursor: pointer;
+    font-size: 1.3em;
+    }
+    .caja-inf{
+        height: 100px;
+    }
+    .btn___1{
+        
+    }
+    .btn___2{
+        margin-top: -95px;  
+        
+    }
+    .datos{
+        font-size: .8em;
+        margin-left: -15px;
+    }
+}
+
+span{
+    cursor: pointer;
+}
+
+
+
+
+
+/*TALLER.....................*/
+.caja-contenedor-seleccionar{
+    background-image: url(../img/seleccionar/fondo.jpeg);;
+    width: 100%;
+    height: 2450px;
+}
+
+.encabezado{
+    width: 100%;
+    height: 120px;
+    background: black;
+}
+.fondo-comprar{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+}
+.logo-comprar{
+    position: relative;
+    width: 220px; 
+    background: none;
+}
+
+.caja-genero{
+    width: 100%;
+    height: 90px;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+.genero__title{ 
+    background: black;
+    color: snow;
+    width: 45%;
+    margin-top: 20px;
+    padding: 9px;
+    position: absolute;
+    font-family:sans-serif;
+    font-size: 2.6em;
+    border-bottom-right-radius: 30%;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    
+}
+.caja-inf{
+    margin-top: 15px;
+    width: 100%;
+    height: 470px;
+    float: left;
+    margin-bottom: 50px;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+
+.contenedor_datos{
+    position: absolute;
+    width: 100%;
+}
+
+.caja__logo{
+    background: rgba(0,0,0,0.00); /*Transparente*/
+    width: 30%;
+    height: 400px;
+    float: left;
+    margin-left: 5%;
+    margin-top: 30px;
+    
+}
+.logo__caja{
+    background: rgba(0,0,0,0.00); /*Transparente*/
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.caja__datos{
+    position: relative;
+    float: left;
+    width:55%;
+    margin-left: 5%;
+    height: 390px;
+    margin-top: 30px;
+    z-index: 50;
+}
+.datos__caja{
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    border-bottom-right-radius: 12%;
+    
+}
+
+
+
+
+.caja__titulo_evento{
+    margin-top: 5px;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background: none;
+    font-size: 1em;
+    
+}
+.titulo_evento{
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: cursive;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.caja__artistas_evento{
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background:none;
+    font-size: 1em;
+}
+.artistas_evento{
+    padding: 15px;
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: sans-serif;
+    margin-left: 5%;
+}
+
+
+.caja__descripcion_evento{
+    margin-top: 202px;
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    background:none;
+    font-size: 1em;
+}
+
+.descripcion_evento{
+    padding: 15px;
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: sans-serif;
+    margin-left: 5%;
+}
+
+.patrocinadores{
+    margin-top: 334px;
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    background: none;
+    font-size: .9em;
+    margin-left: 15px;
+}
+
+.caja_p_uno  {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+.caja_p_dos    {
+    margin-left: 165px;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+.caja_p_tres    {
+    margin-left: 330px;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+
+
+
+.p_uno{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+.p_dos{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+.p_tres{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+.localidad{
+    height: 500px;
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+}
+.datos{
+    background: none;
+    color:black;
+    text-align: justify;
+}
+
+.datos-evento{
+    margin-top: -25px;
+    font-family: cursive;
+    position: absolute;
+    background:none ;
+    color: white;
+    font-size: 1.2em;
+    margin-left: 25px;
+    transition: 1s;
+}
+.caja-titulos-localidad-a{
+    width: 90%;
+    height: 100px;
+    background: none; 
+    margin: auto;
+    margin-top: 500px;
+}
+.titulos-localidad-a{
+    text-align: center;
+    color: white;
+    background: none;
+    margin: auto;
+    width: 99%;
+    font-size: 100px;
+    font-family: cursive;
+    font-weight: bold;
+    -webkit-text-stroke:7px;
+    -webkit-text-stroke-color:black;
+}
+
+
+
+.caja__btn__volver-comprar{
+    background: none;
+    width: 150px;
+    height: 60px;
+    float: right;
+    margin-right: 0px;
+    
+    
+}
+.btn__volver-comprar{
+    background: black;
+    width: 160px;
+    height: 70px;
+    color: white;
+    font-family: cursive;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition:.2s;
+    position: fixed; 
+    bottom: 0;
+    z-index: 20;
+    margin-left: -12px;
+    border-top-left-radius:55px;
+    border-top-right-radius:55px;
+    border: 2px solid white;
+}
+
+.btn__volver-comprar:hover{
+    background:red;
+    transition:.2s;
+    
+}
+.caja_palcos-disponibles{
+    color: white;
+    background: none;
+    width: 99%;
+    font-size: 100px;
+    font-family: cursive;
+    font-weight: bold;
+    -webkit-text-stroke:7px;
+    -webkit-text-stroke-color:black;
+    margin-top: 80px;
+    
+}
+.palcos-disponibles{
+    margin-top: 60px;
+}
+
+.caja__icono-arriba{
+    z-index:auto;
+    width: 100px;
+    background: gold;
+    position: absolute;
+    margin-top: 15px;
+}
+.icono-arriba{
+    cursor: pointer;
+    position: fixed;
+}
+/**/
+.caja-btn-volver{
+    float: right;
+    background: rgba(0,0,0,0.1);
+}
+.btn-volver{
+    background: black;
+    width: 160px;
+    height: 70px;
+    color: white;
+    font-family: cursive;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition:.2s;
+    position: fixed; 
+    bottom: 0;
+    z-index: 20;
+    margin-left: -160px;
+    border-top-left-radius:55px;
+    border-top-right-radius:55px;
+    border: 2px solid white; 
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 1px 1px 1px;
+}
+.btn-volver:hover{
+    background: red;
+    transition: .5s;
+    text-decoration:underline;
+}
+/**/
+
+
+
+/*FOOTER*/
+.column__txt{
+    background: #222;
+}
+.column__title{
+    background: #222;
+}
+.main-footer{
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.9em;
+}
+.copy{
+    background: #222;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+.main-footer [class*="icon-"]{
+    color: white;
+    text-decoration: none;
+    background: #222;
+    z-index: 9000000;
+}
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 5px;
+    right: 3px;
+    background: #222;
+}
+/*FOOTER*/
+
+/*ESTILOS RESPONSIVE*/
+.menu{
+    color: red;
+    font-size: 1em;
+    font-family: Montserrat;
+}
+.main-header__contactinfo__address{
+    font-family: Montserrat;
+}
+.main-header__contactinfo__phone{
+    font-family: Montserrat;
+}
+
+
+@media screen and (min-width:480px)  {
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+    
+    .column--33 {
+        width: 31%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    
+    .main-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:930px){
+    .caja_palcos-disponibles{
+        color: white;
+        background: none;
+        width: 99%;
+        font-size: 50px;
+        font-family: cursive;
+        -webkit-text-stroke:1px;
+        -webkit-text-stroke-color:black;
+        margin-top: 80px;
+        text-align: center;
+    }
+    
+    .caja-contenedor-seleccionar{
+    background-image: url(../img/seleccionar/fondo.jpeg);
+    width: 100%;
+    height: 2750px;
+    }
+
+    .caja-titulos-localidad-a{
+        margin-top: 930px;
+        width: 100%;
+        height: 100px;
+        background: none; 
+    }
+    .titulos-localidad-a{
+        color: white;
+        width: 100%;
+        font-size: 2.8em;
+        font-family: cursive;
+        z-index: 5000;
+        -webkit-text-stroke:1px;
+        -webkit-text-stroke-color:black;
+    }
+    
+    .localidad{
+        margin-top:0px ;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        transition: .5s;
+    }
+    .descripcion_evento{
+        font-size: 1em;
+    }
+    .caja-inf{
+        height: 700px;
+        background: rgba(0,0,0,0.0);
+    }
+    .caja__datos{
+        position: relative;
+        margin-top: -110px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .caja__logo{
+        position: relative;
+        width:60%;
+        margin-bottom: 150px;
+        margin-left: 20%;
+    }
+    .caja__boton-comprar{
+        padding: 5px;
+        font-size: .6em;
+    }
+    .volver-comprar{
+        margin-top: 1px;
+        margin-right: 0%;
+        margin-left: 40%;
+    }
+    .titulo_evento{
+        font-size: 1.9em;
+        text-align: center;
+    }
+    
+    
+
+    
+    
+
+
+    .patrocinadores{
+        margin-top: 334px;
+        position: absolute;
+        width: 100%;
+        height: 65px;
+        background: none;
+        font-size: .9em;
+        margin-left: 15px;
+    }
+
+    .caja_p_uno  {
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+    .caja_p_dos    {
+        margin-left: 120px;
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+    .caja_p_tres    {
+        margin-left: 240px;
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+
+
+
+    .p_uno{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .p_dos{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .p_tres{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .artistas_evento{
+        font-size: 1em;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:600px){
+    .datos__caja{
+    width: 100%;
+    height: 260px;
+    border: 10px solid black;
+    border-bottom-right-radius: 12%;
+    
+    }
+    .datos-evento{
+        font-size: 1em;
+        transition: 1s;
+        
+    }
+    .genero__title{
+        width: 90%;
+    }
+    
+    
+    
+}
+@media screen and (max-width:450px) {
+    
+    .main-header__contactinfo{
+        display: none;
+    }
+    .logo-container{
+        
+    }
+    .patrocinadores{
+        display: none;
+    }
+    .titulo_evento{
+        font-size: 1.5em;
+    }
+    .caja__titulo_evento{
+        margin-left: -5px;
+    }
+    .caja__datos{
+        height: 450px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

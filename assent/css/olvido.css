@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+}
+.caja-padre-olvido{
+    color: white;
+    width: 94%;
+    height: 440px;
+}
+
+.caja-padre-olvido{
+    content: '';
+    width: 94%;
+    height: 585px;
+    background: rgba(0,0,0,.8);
+    z-index: 110000;
+    top: 0;
+}
+
+.img-mail{
+    width: 130px;
+    margin-top: 0px;
+    z-index: 30;
+    position: relative;
+}
+.img-olvido{
+    width: 94%;
+    margin-left: 3%;
+    z-index: -15;
+    position: absolute;
+    height: 585px;
+}
+.detalles{
+    width: 70%;
+    text-align: justify;
+    z-index: 30;
+    position: relative;
+}
+.form-email{
+    text-align: center;
+    padding: 5px 9px 5px 9px;
+    font-size: 1.2em;
+    margin: 15px;
+    width: 350px;
+    z-index: 30;
+    position: relative;
+}
+.btn-enviar_olvido{
+    background: crimson;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: 1.2em;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.btn-enviar_olvido:hover{
+    background: rgb(150,14,41);
+}
+.btn-enviar_olvido:active{
+    transform: scale(1.05);
+}
+.caja-barra-olvido{
+    margin-top: 50px;
+}
+.barra-superior-olvido{
+    background: black;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 15px;
+    padding: 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+@media screen and (max-width:650px){
+    .form-email{
+        width: 190px;
+    }
+    .espace{
+        display: none;
+    }
+    .img-mail{
+        display: none;
+    }
+    .caja-padre-olvido{
+    content: '';
+    width: 94%;
+    height: 100%;
+    background-image: url(../img/olvido/degradado.jpg);
+        background-size: cover;
+    z-index: 110000;
+    top: 0;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Pl</title>
+        <link rel="stylesheet" href="Assent/css/estilos-formularios.css"/>
+        <link rel="stylesheet" href="Assent/css/estilos.css"/>
+    </head>
+    <body>
+        <style>
+            .caja-formulario{
+                width: 100%;
+                background-image: url(Assent/img/background-area.jpg);
+                height: 810px;
+            }
+            .caja-form{
+                background: rgba(1,1,1,.8);
+                width: 80%;
+                height: 770px;
+                border-radius: 30px;
+                margin:auto;
+
+            }
+        </style>
+        <script>
+            function agregar_patrocinador(){
+
+                var nombre, tipo, telefono, correo, expresion;
+
+                nombre = document.getElementById("nombre").value;
+                tipo = document.getElementById("tipo").value;
+                telefono = document.getElementById("telefono").value;
+                correo = document.getElementById("correo").value;
+                expresion = /\w+@+\w+\.+[a-z]/; 
+
+                if  (nombre==="" ||  tipo==="" ||   telefono==="" ||  correo===""){
+
+                    Swal.fire(
+                        'Se detectaron campos vacios',
+                        'Completa todos los campos para continuar',
+                        'question'
+                    );
+                    return false;
+                }
+                // CORREO
+                // validar que es un correo
+                if  (!expresion.test(correo)){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'Correo no encontrado, verifique nuevamente',
+                        footer: ''
+                    });
+                    return false;
+                }
+                if
+                    (correo.length>=30){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El correo ingresado es muy extenso',
+                            footer: ''
+                        });
+                        return false;
+                    }
+
+                if
+                    (correo.length<8){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El correo ingresado es muy corto',
+                            footer: ''
+                        });
+                        return false;
+                    }
+                // NOMBRE 
+                if
+                    (nombre.length>=15){
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El nombre es muy largo, debe tener máximo 15 caracteres',
+                            footer: ''
+                        });
+                        return false;
+                    }
+                if
+                    (nombre.length<4){
+
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El nombre es muy corto, debe tener minimo 4 caracteres',
+                            footer: ''
+                        });        
+                        return false;
+                    }
+                // TIPO
+
+                if(tipo==="Seleccione..."){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error...',
+                        text: 'Seleccione el tipo de de patrocinador para continuar',
+                        footer: ''
+                    });        
+                    return false;
+                }
+                // TELEFONO
+
+                //Validar que es un número de teléfono
+                if  (isNaN(telefono)){
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'No se ingreso un número telefónico',
+                        footer: ''
+                    });
+                    return false;
+                }
+                // telefono
+                if
+                    (telefono.length===10 || telefono.length===7 ){
+                        return true;
+                    }else{
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Oops...',
+                            text: 'El telefónico no es valido recuerde colocar un teléfono fijo o celular',
+                            footer: ''
+                        });
+                        return false;
+                    } 
+                
+
+
+
+            }
+            function sololetras(e) {
+                key=e.keyCode || e.which;
+
+                teclado=String.fromCharCode(key).toLowerCase();
+
+                letras="qwertyuiopasdfghjklñzxcvbnm ";
+
+                especiales="8-37-38-46-164";
+
+                teclado_especial=false;
+
+                for(var i in especiales){
+                    if(key==especiales[i]){
+                        teclado_especial=true;
+                        break;
+                    }
+                }
+
+                if(letras.indexOf(teclado)==-1 && !teclado_especial){
+                    return false;
+                }
+
+            }
+
+
+
+        </script>
+        <div class="caja-formulario">
+            <br/>
+            <div class="caja-form">
+                <br/>
+                <h1 class="titulo">Agregar Patrocinador</h1>
+                <div class="formulario">
+                    <form action="" method="post" onsubmit="return agregar_patrocinador()">
+
+                        <label  class="label" for="nombre">Nombre de la empresa</label>
+                        <input type="text" id="nombre" name="nombre" class="contenedor-inputs input_100" placeholder="Nombre de la empresa" onkeypress="return sololetras(event)" onpaste="return false"/>
+
+
+                        <br/>
+                        <label  class="label" for="tipo">  Tipo de alianza  </label>
+                        <select type="text" id="tipo" name="tipo" class="contenedor-inputs input_100">
+                            <option> Seleccione... </option>
+                            <option> Licor </option>
+                            <option> Emisora </option>
+                            <option> Empresario </option>
+                        </select>
+
+
+
+                        <br/>
+                        <label  class="label" for="telefono">Teléfono </label>
+                        <input type="text" id="telefono" name="telefono" class="contenedor-inputs input_100" placeholder="Ingrese el teléfono "/>
+
+
+                        <br/>
+                        <label  class="label" for="correo">Correo</label>
+                        <input type="text" id="correo" name="correo" class="contenedor-inputs input_100" placeholder="Ingrese el correo "/>
+
+                        <br/>
+                        <br/>
+                        <center>
+                            <br/>
+                            <button class="btn_submit btn2" type="submit">Guardar</button>
+                            <button class="btn_reset btn2" type="reset">Borrar</button>
+                        </center>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="../assent/plugins/sweetAlert2/sweetalert2.all.min.js"></script>
+    </body>
+</html>

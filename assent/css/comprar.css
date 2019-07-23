@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+/*   background: url(../img/seleccionar/fondo.jpeg);*/
+}
+.contenedor-comprar{
+    background-image: url(../img/seleccionar/fondo.jpeg);
+    width: 100%;
+    height:800px;
+}
+.fondo-comprar{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    position: absolute;
+}
+.logo-comprar{
+    position: relative;
+    width: 220px; 
+    background: none;
+}
+
+.caja-genero{
+    width: 100%;
+    height: 90px;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+.genero__title{ 
+    background: black;
+    color: snow;
+    width: 45%;
+    margin-top: 20px;
+    padding: 9px;
+    position: absolute;
+    font-family:sans-serif;
+    font-size: 2.6em;
+    border-bottom-right-radius: 30%;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    
+}
+
+.caja-inf{
+    margin-top: 15px;
+    width: 100%;
+    height: 470px;
+    float: left;
+    margin-bottom: 50px;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+
+.contenedor_datos{
+    position: absolute;
+    width: 100%;
+}
+
+.caja__logo{
+    background: rgba(0,0,0,0.00); /*Transparente*/
+    width: 30%;
+    height: 400px;
+    float: left;
+    margin-left: 5%;
+    margin-top: 30px;
+    transition: .2s;
+    
+}
+
+.logo__caja{
+    background: rgba(0,0,0,0.00); /*Transparente*/
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.caja__datos{
+    position: relative;
+    float: left;
+    width:55%;
+    margin-left: 5%;
+    height: 390px;
+    margin-top: 30px;
+}
+.datos__caja{
+    width: 100%;
+    height: 100%;
+    border: 10px solid black;
+    border-bottom-right-radius: 12%;
+    
+}
+
+
+
+
+.caja__titulo_evento{
+    margin-top: 5px;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background: none;
+    font-size: 1em;
+    
+}
+.titulo_evento{
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: cursive;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.icon-user{
+    display: block;
+}
+.caja__artistas_evento{
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background:none;
+    font-size: 1em;
+}
+.artistas_evento{
+    padding: 15px;
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: sans-serif;
+    margin-left: 5%;
+}
+
+
+.caja__descripcion_evento{
+    margin-top: 202px;
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    background:none;
+    font-size: 1em;
+}
+
+.descripcion_evento{
+    padding: 15px;
+    color: black;
+    position: absolute;
+    background: none;
+    font-family: sans-serif;
+    margin-left: 5%;
+}
+
+.patrocinadores{
+    margin-top: 334px;
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    background: none;
+    font-size: .9em;
+    margin-left: 15px;
+}
+
+.caja_p_uno  {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+.caja_p_dos    {
+    margin-left: 165px;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+.caja_p_tres    {
+    margin-left: 330px;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: none;
+}
+
+
+
+.p_uno{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+.p_dos{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+.p_tres{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    background:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boton__comprar{
+    background: yellow;
+    color: black;
+    padding: 15px;
+    font-family: cursive;
+    font-size: 2.5em;
+    text-decoration: none;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5%;
+    transition: .2s;
+}
+.boton__comprar:hover{
+    color: black;
+    background: aqua;
+    padding: 30px;
+    border: 2px solid black;
+    font-size: 2.6em;
+}
+.btn_volver-comprar{
+    margin-top: 20px;
+    margin-right: 15px;
+    font-family:cursive;
+    float: right;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 30px 10px 30px;
+    border: 4px solid white;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: .2s;
+}
+.btn_volver-comprar:hover{
+    border: 4px solid black;
+    background: red;
+    color: white;
+    font-size: 2em;
+}
+
+
+
+
+
+/*FOOTER*/
+.column__txt{
+    background: #222;
+}
+.column__title{
+    background: #222;
+}
+.main-footer{
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.copy{
+    background: #222;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+.main-footer [class*="icon-"]{
+    color: white;
+    text-decoration: none;
+    background: #222;
+}
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 5px;
+    right: 3px;
+    background: #222;
+}
+/*FOOTER*/
+.container{
+    width: 100%;
+    margin: auto;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+.container--flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+.column {
+    width: 100%;
+    background: rgba(0,0,0,0.00); /*Transparente*/
+}
+.main__title {
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 1.8em;
+    font-family: 'pacifico', cursive;
+    font-weight: 100;
+}
+.column__title{
+    font-size: 1.3em;
+}
+.copy{
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.main-footer [class*="icon-"]{
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 5px;
+    right: 3px;
+}
+.patrocinio{
+    margin-top: -12px;
+}
+@media screen and (min-width:480px)  {
+    .main-footer .container--flex{
+        align-items: flex-start;
+    }
+    
+    .column--33 {
+        width: 31%;
+    }
+}
+@media screen and (min-width:1024px) {
+    
+    .main-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width:930px){
+    .genero__title{
+        width: 90%;
+    }
+    .contenedor-comprar{
+    background-image: url(../img/seleccionar/fondo.jpeg);
+    width: 100%;
+    height: 1200px;
+    }
+    .boton__comprar:hover{
+    color: black;
+    background: yellow;
+    padding: none;
+    border: 2px solid black;
+    font-size: 2em;
+    }
+    .patrocinio{
+    margin-top: 1px;
+    }
+    .descripcion_evento{
+        font-size: 1em;
+    }
+    .caja-inf{
+        height: 700px;
+        background: rgba(0,0,0,0.0);
+    }
+    .caja__datos{
+        position: relative;
+        margin-top: -110px;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .caja__logo{
+        position: relative;
+        width:60%;
+        margin-bottom: 150px;
+        margin-left: 20%;
+    }
+    .caja__boton-comprar{
+        margin-top: 1000px;
+        padding: 5px;
+        font-size: .6em;
+    }
+    .volver-comprar{
+        margin-top: 1px;
+        margin-right: 27%;
+        margin-left: 40%;
+    }
+    .titulo_evento{
+        font-size: 1.9em;
+        text-align: center;
+    }
+    
+    
+.patrocinadores{
+    margin-top: 334px;
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    background: none;
+    font-size: .9em;
+    margin-left: 15px;
+    }
+    
+    
+
+
+    .patrocinadores{
+        margin-top: 334px;
+        position: absolute;
+        width: 100%;
+        height: 65px;
+        background: none;
+        font-size: .9em;
+        margin-left: 15px;
+    }
+
+    .caja_p_uno  {
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+    .caja_p_dos    {
+        margin-left: 120px;
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+    .caja_p_tres    {
+        margin-left: 240px;
+        position: absolute;
+        width: 110px;
+        height: 40px;
+        background: none;
+    }
+
+
+
+    .p_uno{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .p_dos{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .p_tres{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        background:none;
+    }
+    .artistas_evento{
+        font-size: 1em;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:450px) {
+    .main-header__contactinfo{
+        display: none;
+    }
+    .logo-container{
+        
+    }
+    .patrocinio{
+        display: none;
+    }
+    .titulo_evento{
+        font-size: 1.5em;
+    }
+    .caja__titulo_evento{
+        margin-left: -5px;
+    }
+}
