@@ -49,7 +49,7 @@
                                               href="galeria.html" class="menu__link">Galería</a></li>
                     <li class="menu__item"><a href="contacto.html" class="menu__link">Contactenos</a></li>
                 </ul>          
-                
+
             </div>
         </nav>   
         <!--Formulario -->
@@ -103,18 +103,22 @@
 
                         $insertar = "INSERT INTO registrarse (nombre, apellido, correo, clave, telefono) values ('$nombre', '$apellido', '$correo', '$clave', '$telefono')";
 
+                        
+                        $verificar_usuario = mysqli_query ($conexion, "SELECT * FROM registrarse WHERE correo = '$correo'");
+                        if(mysqli_num_rows($verificar_usuario) > 0 ){
+                            echo "<script>  alert('El ususario ya esta registrado');</script> ";
+                            exit;
+                        }
+                        
+                        
+                        
                         $ejecutar = mysqli_query ($conexion, $insertar);
 
-
-
-
-
-
+                        if($ejecutar){
+                            echo "<script>  alert('Registro exitoso') </script> ";
+                        }
                     }
-
-
                     ?>
-
 
 
 

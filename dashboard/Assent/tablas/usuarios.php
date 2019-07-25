@@ -20,7 +20,7 @@
         <title>Usuarios</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container col-sm-12">
             <div  class="table-wrapper">
                 <div id="table-id" class="table-title">
                     <div class="row">
@@ -32,8 +32,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
 
                 <table  id="table_id" class="table table-striped table-hover">
@@ -49,9 +47,6 @@
                             <th>borrar</th>
                         </tr>
                     </thead>
-
-
-
 
                     <tbody>
                         <tr>

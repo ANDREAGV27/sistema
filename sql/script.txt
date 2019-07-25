@@ -1,0 +1,163 @@
+CREATE TABLE Escenario (
+  idEscenarios INT(4) NOT NULL AUTO_INCREMENT,
+  nombreEscenario VARCHAR(45) NOT NULL,
+  direccionEscenario VARCHAR(45) NOT NULL,
+  capacidad VARCHAR(45) NOT NULL,
+  telefono VARCHAR(12) NOT NULL,
+  correo VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idEscenarios)
+);
+
+CREATE TABLE artistas (
+  idartistas INT(4) NOT NULL AUTO_INCREMENT,
+  seudonimoArtista VARCHAR(45) NOT NULL,
+  nombreArtista VARCHAR(45) NOT NULL,
+  apellidosArtista VARCHAR(45) NOT NULL,
+  generoMusical VARCHAR(20) NOT NULL,
+  manager VARCHAR(45) NOT NULL,
+  telefonoManager VARCHAR(12) NOT NULL,
+  correoManager VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idartistas)
+);
+
+CREATE TABLE Registrarse (
+  idPersonas INT(4) NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(15) NOT NULL,
+  apellido VARCHAR(15) NOT NULL,
+  correo VARCHAR(45) NOT NULL,
+  clave VARCHAR(20) NOT NULL,
+  comfimarClave VARCHAR(20) NOT NULL,
+  telefono VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idPersonas)
+);
+
+CREATE TABLE Alianzas (
+  idAlianzas INT(4) NOT NULL AUTO_INCREMENT,
+  nombreEmpresa VARCHAR(15) NOT NULL,
+  tipoAlianza VARCHAR(45) NOT NULL,
+  generoMusical VARCHAR(20) NOT NULL,
+  telefono VARCHAR(12) NOT NULL,
+  correo VARCHAR(45) NOT NULL,
+  PRIMARY KEY(idAlianzas)
+);
+
+CREATE TABLE Eventos (
+  idEvento INT(4) NOT NULL AUTO_INCREMENT,
+  nombreEvento VARCHAR(15) NOT NULL,
+  Escenario_idEscenarios INT(4) NOT NULL,
+  generoMusical VARCHAR(20) NOT NULL,
+  fechaEvento DATE NOT NULL,
+  totalVentas INT(45) NULL,
+  asistencia VARCHAR(14) NULL,
+  PRIMARY KEY(idEvento),
+  INDEX Eventos_FKIndex4(Escenario_idEscenarios),
+  FOREIGN KEY(Escenario_idEscenarios)
+    REFERENCES Escenario(idEscenarios)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE ReporteAsistencia (
+  idReporteAsistencia INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Eventos_idEvento INT(4) NOT NULL,
+  asistencia VARCHAR(12) NOT NULL,
+  PRIMARY KEY(idReporteAsistencia),
+  INDEX ReporteAsistencia_FKIndex1(Eventos_idEvento),
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE Ventas (
+  idVentas INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Eventos_idEvento INT(4) NOT NULL,
+  licor VARCHAR(30) NOT NULL,
+  cerveza VARCHAR(30) NOT NULL,
+  bebidas VARCHAR(30) NOT NULL,
+  PRIMARY KEY(idVentas),
+  INDEX Ventas_FKIndex1(Eventos_idEvento),
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE totalVentas (
+  idtotalVentas INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Eventos_idEvento INT(4) NOT NULL,
+  licor INT(45) NOT NULL,
+  cervezas INT(45) NOT NULL,
+  bebidas INT(45) NOT NULL,
+  PRIMARY KEY(idtotalVentas),
+  INDEX totalVentas_FKIndex1(Eventos_idEvento),
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE BoletasVendidas (
+  idBoletasVendidas INT(4) NOT NULL AUTO_INCREMENT,
+  Eventos_idEvento INT(4) NOT NULL,
+  tipoBoleta VARCHAR(20) NOT NULL,
+  cantidadVendida INT(11) NOT NULL,
+  PRIMARY KEY(idBoletasVendidas),
+  INDEX BoletasVendidas_FKIndex2(Eventos_idEvento),
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE AlianzaAsiste (
+  Eventos_idEvento INT(4) NOT NULL,
+  Alianzas_idAlianzas INT(4) NOT NULL,
+  PRIMARY KEY(Eventos_idEvento, Alianzas_idAlianzas),
+  INDEX Eventos_has_Alianzas_FKIndex1(Eventos_idEvento),
+  INDEX Eventos_has_Alianzas_FKIndex2(Alianzas_idAlianzas),
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Alianzas_idAlianzas)
+    REFERENCES Alianzas(idAlianzas)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE artistaAsiste (
+  artistas_idartistas INT(4) NOT NULL,
+  Eventos_idEvento INT(4) NOT NULL,
+  PRIMARY KEY(artistas_idartistas, Eventos_idEvento),
+  INDEX artistas_has_Eventos_FKIndex1(artistas_idartistas),
+  INDEX artistas_has_Eventos_FKIndex2(Eventos_idEvento),
+  FOREIGN KEY(artistas_idartistas)
+    REFERENCES artistas(idartistas)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE ClienteAsiste (
+  Eventos_idEvento INT(4) NOT NULL,
+  Registrarse_idPersonas INT(4) NOT NULL,
+  cantidad INTEGER UNSIGNED NOT NULL,
+  tipo VARCHAR(30) NOT NULL,
+  PRIMARY KEY(Eventos_idEvento, Registrarse_idPersonas),
+  INDEX clientes_has_Eventos_FKIndex1(Registrarse_idPersonas),
+  INDEX clientes_has_Eventos_FKIndex2(Eventos_idEvento),
+  FOREIGN KEY(Registrarse_idPersonas)
+    REFERENCES Registrarse(idPersonas)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Eventos_idEvento)
+    REFERENCES Eventos(idEvento)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+
