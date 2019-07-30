@@ -57,17 +57,15 @@
             <div class="caja-formulario">
                 <div class="caja-barra">   
                     <div class="barra-superior">
-                        <h1>Registrate</h1>
+                        <h1>¡Regístrate!</h1>
                     </div>  
                 </div>
                 <div class="caja-padre_img">
                     <div class="before_img-register">
                         <img class="img-register" src="assent/img/banner_iniciar.jpg"/>
-                    </div>
+                    </div>    
 
-
-
-                    <form action="registrarse.php" method="post" class="form-register" onsubmit="return validar();">
+                    <form action="registrarse.php" action="enviar.php" method="post" class="form-register" onsubmit="return validar();">
                         <h2 class="form__titulo">Formulario de Registro</h2>
                         <div class="contenedor-inputs">
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48 input primary" onkeypress="return sololetras(event)" onpaste="return false" />
@@ -87,42 +85,6 @@
                             <p class="form__link">¿Ya tienes una cuenta?<a href="iniciar-sesion.html">Ingresa aquí</a></p>
                         </div>
                     </form>
-
-
-
-                    <?php
-
-                    if(isset($_POST['btn'])){
-
-                        $nombre = $_POST['nombre'];
-                        $apellido = $_POST['apellido'];
-                        $correo = $_POST['correo'];
-                        $clave = $_POST['clave'];
-                        $telefono = $_POST['telefono'];
-
-
-                        $insertar = "INSERT INTO registrarse (nombre, apellido, correo, clave, telefono) values ('$nombre', '$apellido', '$correo', '$clave', '$telefono')";
-
-                        
-                        $verificar_usuario = mysqli_query ($conexion, "SELECT * FROM registrarse WHERE correo = '$correo'");
-                        if(mysqli_num_rows($verificar_usuario) > 0 ){
-                            echo "<script>  alert('El ususario ya esta registrado');</script> ";
-                            exit;
-                        }
-                        
-                        
-                        
-                        $ejecutar = mysqli_query ($conexion, $insertar);
-
-                        if($ejecutar){
-                            echo "<script>  alert('Registro exitoso') </script> ";
-                        }
-                    }
-                    ?>
-
-
-
-
                 </div>
             </div>
             <div class="caja-barra-bottom">
@@ -162,6 +124,94 @@
                 <p class="copy">© 2019 EVENTLITE || SCORPION PRODUCCIONES®</p>
             </div>
         </footer>
+
+        <?php
+        $nombre = $_POST["nombre"];
+        $correo = $_POST["correo"];
+
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+
+        require 'PHPMailerr/Exception.php';
+        require 'PHPMailerr/PHPMailer.php';
+        require 'PHPMailerr/SMTP.php';
+
+
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->CharSet =  'UTF-8';
+            $mail->SMTPDebug = 0;                                       // Enable verbose debug output
+            $mail->isSMTP();                                            // Set mailer to use SMTP
+            $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = 'eventlite.software@gmail.com';                     // SMTP username
+            $mail->Password   = 'PASSWORD001';                               // SMTP password
+            $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+            $mail->Port       = 587;                                    // TCP port to connect to
+
+            // Quien envía
+            $mail->setFrom('eventlite.software@gmail.com', $nombre);
+            // ¿A qué correo se envia?
+            $mail->addAddress($correo);  
+            //
+            //    // Attachments       
+            //    $mail->addAttachment('assent/img/bienvenido.jpg', 'Binevenido');    
+
+            // Content
+            $mail->isHTML(true);     
+            // TITULO
+            $mail->Subject = 'Bienvenido';
+
+            $mail->Body    = ' Te damos la bienvenida <br>Tendras los siguientes beneficios:<br>-Descuentos<br>-Promociones<br>-Regalos<br>-Beneficios';
+            //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->send();
+
+        } catch (Exception $e) {
+            echo "Error: {$mail->ErrorInfo}";
+        }
+
+        
+        
+
+        
+        
+        
+        ?>
+        <?php
+        if(isset($_POST['btn'])){
+
+            $nombre = $_POST['nombre'];
+            $apellido = $_POST['apellido'];
+            $correo = $_POST['correo'];
+            $clave = $_POST['clave'];
+            $telefono = $_POST['telefono'];
+
+
+            $insertar = "INSERT INTO registrarse (nombre, apellido, correo, clave, telefono) values ('$nombre', '$apellido', '$correo', '$clave', '$telefono')";
+
+
+            $verificar_usuario = mysqli_query ($conexion, "SELECT * FROM registrarse WHERE correo = '$correo'");
+            if(mysqli_num_rows($verificar_usuario) > 0 ){
+                echo "<script>  alert('El ususario ya esta registrado');</script> ";
+                exit;
+            }
+
+
+
+            $ejecutar = mysqli_query ($conexion, $insertar);
+
+            if($ejecutar){
+                echo "<script>  alert('Registro exitoso') </script> ";
+            }
+        } 
+        ?>
+
+
+
+
+
         <script src="assent/js/form.js"></script>
         <script src="assent/js/app.js"></script>
         <script src="assent/js/menud.js"></script>    

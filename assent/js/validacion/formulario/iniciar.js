@@ -1,18 +1,17 @@
 
 
 function iniciar(){
-    var ciniciar, claveiniciar, expresion;
-    ciniciar = document.getElementById("ciniciar").value;
-    claveiniciar = document.getElementById("claveiniciar").value;
-    expresion = /\w+@+\w+\.+[a-z]/;
+    var correo, password;
+    correo = document.getElementById("correo").value;
+    password = document.getElementById("password").value;
 
 
-    if  (ciniciar==="" || claveiniciar==="" || !expresion.test(ciniciar) || ciniciar.length>=45 || ciniciar.length<8){
+    if  (correo==="" || password===""){
         
             Swal.fire({
               type: 'error',
-              title: 'Oops...',
-              text: 'El usuario y la contraseña son incorrectos, intenta nuevamente',
+              title: 'Erro...',
+              text: 'Complete todos campos para continuar',
               footer: '<p class="olvido">¿No tienes cuenta?<a href="registrarse.html">¡Registrate ahora!</a></p>'
             })
             return false;

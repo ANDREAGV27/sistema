@@ -2,6 +2,7 @@
 <html lang="en">
     <?php
     $conexion = mysqli_connect ("localhost", "root", "", "sistema") or die ("No se pudo conectar");
+        $conexion -> set_charset("utf8");
     ?>
     <head>
         <meta charset="UTF-8">
@@ -16,6 +17,7 @@
         <link rel="stylesheet" href="css//estilos.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+        <link rel="stylesheet" href="../../../assent/css/font.css">
 
         <title>Usuarios</title>
     </head>
@@ -32,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+
 
 
                 <table  id="table_id" class="table table-striped table-hover">
@@ -52,123 +55,88 @@
                         <tr>
 
                             <?php 
-                            $sql = "SELECT * FROM registrarse";
-                            $resultado = mysqli_query($conexion, $sql);
+                            $consulta = "SELECT * FROM registrarse";
+
+                            $ejecutar = mysqli_query($conexion, $consulta);
 
 
-                            while ($mostrar = mysqli_fetch_array($resultado)){
+                            $i = 0;
+
+                            while ($fila = mysqli_fetch_array($ejecutar)){
+
+                                $id = $fila ['idPersonas'];
+                                $nombre = $fila ['nombre'];
+                                $apellido = $fila ['apellido'];
+                                $correo = $fila ['correo'];
+                                $clave = $fila ['clave'];
+                                $telefono = $fila ['telefono'];
+                                $i ++;
+
+
                             ?>
-                            <td> <?php echo $mostrar ['idPersonas'] ?></td>
-                            <td> <?php echo $mostrar ['nombre'] ?></td>
-                            <td> <?php echo $mostrar ['apellido'] ?></td>
-                            <td> <?php echo $mostrar ['correo'] ?></td>
-                            <td> <?php echo $mostrar ['clave'] ?></td>
-                            <td> <?php echo $mostrar ['telefono'] ?></td>
 
-                            <td>
-                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i><br></a>
-
-                            </td>
-                            <td>
-                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i><br></a>
-                            </td>
+                            <td> <?php echo $id ?></td>
+                            <td> <?php echo $nombre ?></td>
+                            <td> <?php echo $apellido ?></td>
+                            <td> <?php echo $correo ?></td>
+                            <td> <?php echo $clave ?></td>
+                            <td> <?php echo $telefono ?></td>
+                            <td><a href="usuarios.php?editar=<?php echo $id; ?>">Editar</a></td>
+                            <td><a href="usuarios.php?borrar=<?php echo $id; ?>">Borrar</a></td>
 
                         </tr>
                         <?php } ?>
                     </tbody>
-
-
                 </table>
-
             </div>
         </div>
 
+        <!--        EDITAR     -->
+
+
+        <?php
+
+        if(isset($_GET['editar'])){
+            include("editar.php");
+        }
+
+        ?>
 
 
 
 
+        <!--         BORRAR         -->
+        <?php 
+        if(isset($_GET['borrar'])){
 
-        <!-- eliminar Modal HTML -->
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">						
-                            <h4 class="modal-title">Delete Event</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">					
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning"><small>This action cannot be undone.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+            $borrar_id = $_GET['borrar'];
+
+            $borrar = "DELETE FROM registrarse WHERE idPersonas='$borrar_id'";
+
+            $ejecutar = mysqli_query($conexion,$borrar); 
+
+            if($ejecutar){
+
+                echo "<script>alert('El usuario ha sido borrado!')</script>";
+                echo "<script>window.open('usuarios.php','_self')</script>";
+            }
+        }
+        ?>
 
 
 
-        <!-- Editar evento, Modal HTML -->
-        <div id="editEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form >
-                        <div class="modal-header">						
-                            <h4 class="modal-title">Actualizar usuario</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">					
-
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Apellido</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Correo</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Clave</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Teléfono</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>  
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" value="Save">
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <script src="js//orden-tabla.js"></script>
+        <script src="js//tabla.js"></script>
+        <script src="js//descarga-bot.js"></script>
+        <script type="text/javascript"  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript"  src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript"  src="https://datatables.net/extensions/buttons/examples/initialisation/export.html"></script>
+        <script type="text/javascript"  src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+        <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
 
 
 
 
-
-
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-            <script src="js//orden-tabla.js"></script>
-            <script src="js//tabla.js"></script>
-            <script src="js//descarga-bot.js"></script>
-            <script type="text/javascript"  src="https://code.jquery.com/jquery-3.3.1.js"></script>
-            <script type="text/javascript"  src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-            <script type="text/javascript"  src="https://datatables.net/extensions/buttons/examples/initialisation/export.html"></script>
-            <script type="text/javascript"  src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-            <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-
-
-
-
-            </body>
-        </html>
+    </body>
+</html>

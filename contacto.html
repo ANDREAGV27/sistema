@@ -62,15 +62,20 @@
                             <a href="" class="social-icon__link"><span class="icon-youtube"></span></a> 
                         </div>
                     </div>
-                    <form action="" method="post" class="formulario column column--50" onsubmit="return contacto();">                  
-                        <laber class="formulario__label">Nombre</laber>
+                    <form action="enviar.php" method="post" class="formulario column column--50" onsubmit="return contacto();">                  
+                        <label class="formulario__label">Nombre</label>
                         <input id="nombrecontacto" onkeypress="return sololetras(event)" onpaste="return false" type="text" class="formulario__input-txt" name="nombre"/>
-                        <laber class="formulario__label">Correo</laber>
+                        
+                        <label class="formulario__label">Correo</label>
                         <input id="correocontacto" type="email" class="formulario__input-txt" name="correo"/>
-                        <laber class="formulario__label">Teléfono</laber>
+                        
+                        <label class="formulario__label">Teléfono</label>
                         <input id="telefonocontacto" type="text" class="formulario__input-txt" name="telefono"/>
-                        <laber class="formulario__label">Mensaje</laber>
-                        <textarea class="formulario__textarea" name="Mensaje" id="mensajecontacto"></textarea>
+                        
+                        <label class="formulario__label">Mensaje</label>
+                        <textarea class="formulario__textarea" name="mensaje" id="mensajecontacto"></textarea>
+                        
+                        
                         <input type="submit" class="btn formulario__btn" value="Enviar mensaje"/>
                     </form>
                 </div>
